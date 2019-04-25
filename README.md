@@ -1,5 +1,6 @@
 # COS
 Galois field
+Р—РґРµСЃСЊ РјРѕР¶РЅРѕ РѕРїРёСЃС‹РІР°С‚СЊ С‚Рѕ С‡С‚Рѕ СЃРґРµР»Р°РЅРѕ Рё С‡С‚Рѕ С‚СЂРµР±СѓРµС‚СЃСЏ СЃРґРµР»Р°С‚СЊ
 
-Здесь можно описывать то что сделано и что требуется сделать
-![alt text]https://github.com/Den2505/COS/blob/master/imgInfoAdd.jpg
+РћРїРёСЃР°РЅРёРµ СЃР»РѕР¶РµРЅРёСЏ
+![alt text](https://github.com/Den2505/COS/blob/master/imgInfoAdd.jpg)
