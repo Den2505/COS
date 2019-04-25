@@ -23,11 +23,27 @@ namespace Galois_fields
             byte b = Convert.ToByte(textBoxB.Text);
             if (operationGF == "addition")
             {
+                label3.Text = "a + b =";
                 labelResult.Text = Convert.ToString(operationAdd(a, b));
+                pictureBox1.Image = Properties.Resources.imgAdd;
+                enableVisibleAdditionLables();
+                operationAdditionExpand();
             }
             if (operationGF == "subtraction")
             {
+                label3.Text = "a - b =";
                 labelResult.Text = Convert.ToString(operationSub(a, b));
+                disableVisibleAdditionLables();
+                pictureBox1.Image = null;
+                // ПОКА ПРОСТО УБИРАЕТ КАРТИНКУ, ЗАМЕНИТЬ НА ДРУГУЮ
+            }
+            if (operationGF == "multiplication")
+            {
+                label3.Text = "a * b =";
+            }
+            if (operationGF == "division")
+            {
+                label3.Text = "a / b =";
             }
         }
 
@@ -49,25 +65,21 @@ namespace Galois_fields
         private void radioButtonApp_CheckedChanged(object sender, EventArgs e)
         {
             operationGF = "addition";
-            label3.Text = "a + b =";
         }
 
         private void radioButtonSub_CheckedChanged(object sender, EventArgs e)
         {
             operationGF = "subtraction";
-            label3.Text = "a - b =";
         }
 
         private void radioButtonMul_CheckedChanged(object sender, EventArgs e)
         {
             operationGF = "multiplication";
-            label3.Text = "a * b =";
         }
 
         private void radioButtonDiv_CheckedChanged(object sender, EventArgs e)
         {
             operationGF = "division";
-            label3.Text = "a / b =";
         }
 
         private void textBoxA_TextChanged(object sender, EventArgs e)
@@ -110,6 +122,49 @@ namespace Galois_fields
             {
                 buttonResult.Enabled = false;
             }
+        }
+
+        private void enableVisibleAdditionLables()
+        {
+            labelA1.Visible = true;
+            labelA2.Visible = true;
+            labelA3.Visible = true;
+            labelA4.Visible = true;
+            labelA5.Visible = true;
+            labelA6.Visible = true;
+            labelA7.Visible = true;
+            labelA8.Visible = true;
+            labelA9.Visible = true;
+            labelA10.Visible = true;
+            //
+        }
+        private void disableVisibleAdditionLables()
+        {
+            labelA1.Visible = false;
+            labelA2.Visible = false;
+            labelA3.Visible = false;
+            labelA4.Visible = false;
+            labelA5.Visible = false;
+            labelA6.Visible = false;
+            labelA7.Visible = false;
+            labelA8.Visible = false;
+            labelA9.Visible = false;
+            labelA10.Visible = false;
+            //
+        }
+
+        private void operationAdditionExpand()
+        {
+            labelA1.Text = textBoxA.Text;
+            labelA2.Text = textBoxB.Text;
+            labelA3.Text = Convert.ToString(Convert.ToByte(labelA1.Text), 2).PadLeft(8, '0');
+            labelA4.Text = Convert.ToString(Convert.ToByte(labelA2.Text), 2).PadLeft(8, '0');
+            labelA5.Text = labelA3.Text;
+            labelA6.Text = labelA4.Text;
+            labelA7.Text = Convert.ToString(Convert.ToByte(labelResult.Text), 2).PadLeft(8, '0');
+            labelA8.Text = labelA7.Text;
+            labelA9.Text = labelResult.Text;
+            labelA10.Text = labelResult.Text;
         }
 
     }
