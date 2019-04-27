@@ -78,10 +78,10 @@ namespace Galois_fields
         }
 
         //генерация таблиц
-        public static byte[] exponentialsT = new byte[256];
-        public static byte[] logarithmsT = new byte[256];
+        private static byte[] exponentialsT = new byte[256];
+        private static byte[] logarithmsT = new byte[256];
         static int genPolynomial = 0x11D;
-        public static byte mul_table(byte at, byte bt)
+        private static byte mul_table(byte at, byte bt)
         {
             byte resultMul = 0;
             byte temp;
@@ -99,7 +99,7 @@ namespace Galois_fields
             return resultMul;
         }
 
-        public void genExpTable()
+        private void genExpTable()
         {
             byte temp = (byte)0x01;
             for(int i=0; i < 256; i++)
@@ -109,7 +109,7 @@ namespace Galois_fields
             }
         }
 
-        public void genLogTable()
+        private void genLogTable()
         {
             for(int i=0; i < 255; i++)
             {
@@ -118,7 +118,7 @@ namespace Galois_fields
         }
         //
 
-        public static byte operationMul(byte a, byte b)
+        private static byte operationMul(byte a, byte b)
         {
             byte resMul = 0;
             if((a != 0)&(b != 0)){
