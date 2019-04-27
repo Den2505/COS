@@ -39,17 +39,27 @@
             this.buttonResult = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.labelResult = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelA1 = new System.Windows.Forms.Label();
             this.labelA2 = new System.Windows.Forms.Label();
             this.labelA3 = new System.Windows.Forms.Label();
             this.labelA4 = new System.Windows.Forms.Label();
             this.labelA5 = new System.Windows.Forms.Label();
             this.labelA6 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelA7 = new System.Windows.Forms.Label();
             this.labelA8 = new System.Windows.Forms.Label();
             this.labelA9 = new System.Windows.Forms.Label();
             this.labelA10 = new System.Windows.Forms.Label();
+            this.labelS1 = new System.Windows.Forms.Label();
+            this.labelS2 = new System.Windows.Forms.Label();
+            this.labelS3 = new System.Windows.Forms.Label();
+            this.labelS4 = new System.Windows.Forms.Label();
+            this.labelS5 = new System.Windows.Forms.Label();
+            this.labelS6 = new System.Windows.Forms.Label();
+            this.labelS7 = new System.Windows.Forms.Label();
+            this.labelS8 = new System.Windows.Forms.Label();
+            this.labelS9 = new System.Windows.Forms.Label();
+            this.labelS10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -175,6 +185,15 @@
             this.labelResult.Size = new System.Drawing.Size(0, 19);
             this.labelResult.TabIndex = 10;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.pictureBox1.Location = new System.Drawing.Point(156, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(477, 499);
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
             // labelA1
             // 
             this.labelA1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -235,15 +254,6 @@
             this.labelA6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.labelA6.Visible = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.pictureBox1.Location = new System.Drawing.Point(156, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(477, 499);
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            // 
             // labelA7
             // 
             this.labelA7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -276,14 +286,115 @@
             // 
             // labelA10
             // 
-            this.labelA10.AutoSize = true;
+            this.labelA10.AutoSize = false;
             this.labelA10.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelA10.Location = new System.Drawing.Point(229, 408);
             this.labelA10.Name = "labelA10";
-            this.labelA10.Size = new System.Drawing.Size(0, 22);
+            this.labelA10.Size = new System.Drawing.Size(50, 22);
             this.labelA10.TabIndex = 22;
             this.labelA10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.labelA10.Visible = false;
+            //
+            // labelS1
+            // 
+            this.labelS1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelS1.Location = new System.Drawing.Point(350, 50);
+            this.labelS1.Name = "labelS1";
+            this.labelS1.Size = new System.Drawing.Size(33, 19);
+            this.labelS1.TabIndex = 13;
+            this.labelS1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelS1.Visible = false;
+            // 
+            // labelS2
+            // 
+            this.labelS2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelS2.Location = new System.Drawing.Point(350, 76);
+            this.labelS2.Name = "labelS2";
+            this.labelS2.Size = new System.Drawing.Size(33, 19);
+            this.labelS2.TabIndex = 14;
+            this.labelS2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelS2.Visible = false;
+            // 
+            // labelS3
+            // 
+            this.labelS3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelS3.Location = new System.Drawing.Point(412, 50);
+            this.labelS3.Name = "labelS3";
+            this.labelS3.Size = new System.Drawing.Size(73, 19);
+            this.labelS3.TabIndex = 15;
+            this.labelS3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelS3.Visible = false;
+            // 
+            // labelS4
+            // 
+            this.labelS4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelS4.Location = new System.Drawing.Point(412, 76);
+            this.labelS4.Name = "labelS4";
+            this.labelS4.Size = new System.Drawing.Size(73, 19);
+            this.labelS4.TabIndex = 16;
+            this.labelS4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelS4.Visible = false;
+            // 
+            // labelS5
+            // 
+            this.labelS5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelS5.Location = new System.Drawing.Point(398, 141);
+            this.labelS5.Name = "labelS5";
+            this.labelS5.Size = new System.Drawing.Size(73, 19);
+            this.labelS5.TabIndex = 17;
+            this.labelS5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelS5.Visible = false;
+            // 
+            // labelS6
+            // 
+            this.labelS6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelS6.Location = new System.Drawing.Point(398, 160);
+            this.labelS6.Name = "labelS6";
+            this.labelS6.Size = new System.Drawing.Size(73, 19);
+            this.labelS6.TabIndex = 18;
+            this.labelS6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelS6.Visible = false;
+            // 
+            // labelS7
+            // 
+            this.labelS7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelS7.Location = new System.Drawing.Point(398, 185);
+            this.labelS7.Name = "labelS7";
+            this.labelS7.Size = new System.Drawing.Size(73, 19);
+            this.labelS7.TabIndex = 19;
+            this.labelS7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelS7.Visible = false;
+            // 
+            // labelS8
+            // 
+            this.labelS8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelS8.Location = new System.Drawing.Point(303, 376);
+            this.labelS8.Name = "labelS8";
+            this.labelS8.Size = new System.Drawing.Size(73, 19);
+            this.labelS8.TabIndex = 20;
+            this.labelS8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelS8.Visible = false;
+            // 
+            // labelS9
+            // 
+            this.labelS9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelS9.Location = new System.Drawing.Point(405, 376);
+            this.labelS9.Name = "labelS9";
+            this.labelS9.Size = new System.Drawing.Size(33, 19);
+            this.labelS9.TabIndex = 21;
+            this.labelS9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelS9.Visible = false;
+            // 
+            // labelS10
+            // 
+            this.labelS10.AutoSize = false;
+            this.labelS10.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelS10.Location = new System.Drawing.Point(229, 408);
+            this.labelS10.Name = "labelS10";
+            this.labelS10.Size = new System.Drawing.Size(50, 22);
+            this.labelS10.TabIndex = 22;
+            this.labelS10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelS10.Visible = false;
             // 
             // Form1
             // 
@@ -292,6 +403,16 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(640, 522);
+            this.Controls.Add(this.labelS10);
+            this.Controls.Add(this.labelS9);
+            this.Controls.Add(this.labelS8);
+            this.Controls.Add(this.labelS7);
+            this.Controls.Add(this.labelS6);
+            this.Controls.Add(this.labelS5);
+            this.Controls.Add(this.labelS4);
+            this.Controls.Add(this.labelS3);
+            this.Controls.Add(this.labelS2);
+            this.Controls.Add(this.labelS1);
             this.Controls.Add(this.labelA10);
             this.Controls.Add(this.labelA9);
             this.Controls.Add(this.labelA8);
@@ -346,6 +467,16 @@
         private System.Windows.Forms.Label labelA8;
         private System.Windows.Forms.Label labelA9;
         private System.Windows.Forms.Label labelA10;
+        private System.Windows.Forms.Label labelS1;
+        private System.Windows.Forms.Label labelS2;
+        private System.Windows.Forms.Label labelS3;
+        private System.Windows.Forms.Label labelS4;
+        private System.Windows.Forms.Label labelS5;
+        private System.Windows.Forms.Label labelS6;
+        private System.Windows.Forms.Label labelS7;
+        private System.Windows.Forms.Label labelS8;
+        private System.Windows.Forms.Label labelS9;
+        private System.Windows.Forms.Label labelS10;
     }
 }
 

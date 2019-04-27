@@ -4,3 +4,13 @@ Galois field
 
 Описание сложения  
 ![alt text](https://github.com/Den2505/COS/blob/master/imgAdd.png)
+
+
+Описание вычитания   
+![alt text](https://github.com/Den2505/COS/blob/master/imgSub.png)
+
+Описание произведения   
+*
+
+Описание частного   
+*
