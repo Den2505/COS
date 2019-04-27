@@ -60,6 +60,7 @@
             this.labelS8 = new System.Windows.Forms.Label();
             this.labelS9 = new System.Windows.Forms.Label();
             this.labelS10 = new System.Windows.Forms.Label();
+            this.genPolynomialBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -286,7 +287,6 @@
             // 
             // labelA10
             // 
-            this.labelA10.AutoSize = false;
             this.labelA10.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelA10.Location = new System.Drawing.Point(229, 408);
             this.labelA10.Name = "labelA10";
@@ -294,7 +294,7 @@
             this.labelA10.TabIndex = 22;
             this.labelA10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.labelA10.Visible = false;
-            //
+            // 
             // labelS1
             // 
             this.labelS1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -387,7 +387,6 @@
             // 
             // labelS10
             // 
-            this.labelS10.AutoSize = false;
             this.labelS10.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelS10.Location = new System.Drawing.Point(229, 408);
             this.labelS10.Name = "labelS10";
@@ -396,13 +395,45 @@
             this.labelS10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.labelS10.Visible = false;
             // 
+            // genPolynomialBox
+            // 
+            this.genPolynomialBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.genPolynomialBox.Enabled = false;
+            this.genPolynomialBox.Font = new System.Drawing.Font("Times New Roman", 14F);
+            this.genPolynomialBox.FormattingEnabled = true;
+            this.genPolynomialBox.Items.AddRange(new object[] {
+            "x⁸+x⁴+x³+x²+1",
+            "x⁸+x⁵+x³+x+1",
+            "x⁸+x⁵+x³+x²+1",
+            "x⁸+x⁶+x³+x²+1",
+            "x⁸+x⁶+x⁴+x³+x²+x+1",
+            "x⁸+x⁶+x⁵+x+1",
+            "x⁸+x⁶+x⁵+x²+1",
+            "x⁸+x⁶+x⁵+x³+1",
+            "x⁸+x⁶+x⁵+x⁴+1",
+            "x⁸+x⁷+x²+x+1",
+            "x⁸+x⁷+x³+x²+1",
+            "x⁸+x⁷+x⁵+x³+1",
+            "x⁸+x⁷+x⁶+x+1",
+            "x⁸+x⁷+x⁶+x³+x²+x+1",
+            "x⁸+x⁷+x⁶+x⁵+x²+x+1",
+            "x⁸+x⁷+x⁶+x⁵+x⁴+x²+1"});
+            this.genPolynomialBox.Location = new System.Drawing.Point(16, 210);
+            this.genPolynomialBox.Name = "genPolynomialBox";
+            this.genPolynomialBox.Size = new System.Drawing.Size(193, 29);
+            this.genPolynomialBox.TabIndex = 23;
+            this.genPolynomialBox.Tag = "";
+            this.genPolynomialBox.SelectedIndexChanged += new System.EventHandler(this.genPolynomial_SelectedIndexChanged);
+            this.genPolynomialBox.SelectedIndex = 0;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(640, 522);
+            this.ClientSize = new System.Drawing.Size(1026, 522);
+            this.Controls.Add(this.genPolynomialBox);
             this.Controls.Add(this.labelS10);
             this.Controls.Add(this.labelS9);
             this.Controls.Add(this.labelS8);
@@ -477,6 +508,7 @@
         private System.Windows.Forms.Label labelS8;
         private System.Windows.Forms.Label labelS9;
         private System.Windows.Forms.Label labelS10;
+        private System.Windows.Forms.ComboBox genPolynomialBox;
     }
 }
 

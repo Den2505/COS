@@ -44,7 +44,9 @@ namespace Galois_fields
             if (operationGF == "multiplication")
             {
                 label3.Text = "a * b =";
-                labelResult.Text = null;
+                genExpTable();
+                genLogTable();
+                labelResult.Text = Convert.ToString(operationMul(a, b));
                 pictureBox1.Image = null;
                 disableVisibleAdditionLables();
                 disableVisibleSubtractionLables();
@@ -70,30 +72,86 @@ namespace Galois_fields
 
         private static byte operationSub(byte a, byte b)
         {
-            byte resAdd = (byte)(a ^ b);
-            return resAdd;
+            byte resSub = (byte)(a ^ b);
+            return resSub;
             //SUB
+        }
+
+        //генерация таблиц
+        public static byte[] exponentialsT = new byte[256];
+        public static byte[] logarithmsT = new byte[256];
+        static int genPolynomial = 0x11D;
+        public static byte mul_table(byte at, byte bt)
+        {
+            byte resultMul = 0;
+            byte temp;
+            while(at != 0){
+                if ((at & 1) != 0){
+                    resultMul = (byte)(resultMul ^ bt);
+                }
+                temp = (byte)(bt & 0x80);
+                bt = (byte)(bt << 1);
+                if (temp != 0){
+                    bt = (byte)(bt ^(genPolynomial & 0xff));
+                }
+                at = (byte)(at >> 1);
+            }
+            return resultMul;
+        }
+
+        public void genExpTable()
+        {
+            byte temp = (byte)0x01;
+            for(int i=0; i < 256; i++)
+            {
+                exponentialsT[i] = temp;
+                temp = mul_table(temp, (byte)0x02);
+            }
+        }
+
+        public void genLogTable()
+        {
+            for(int i=0; i < 255; i++)
+            {
+                logarithmsT[exponentialsT[i]] = (byte)i;
+            }
+        }
+        //
+
+        public static byte operationMul(byte a, byte b)
+        {
+            byte resMul = 0;
+            if((a != 0)&(b != 0)){
+                byte temp = (byte)((logarithmsT[a] + logarithmsT[b]) % 255);
+                resMul = exponentialsT[temp];
+            }
+            return resMul;
+            //MUL
         }
 
         string operationGF = "addition";
         private void radioButtonApp_CheckedChanged(object sender, EventArgs e)
         {
             operationGF = "addition";
+            genPolynomialBox.Enabled = false;
         }
 
         private void radioButtonSub_CheckedChanged(object sender, EventArgs e)
         {
             operationGF = "subtraction";
+            genPolynomialBox.Enabled = false;
         }
 
         private void radioButtonMul_CheckedChanged(object sender, EventArgs e)
         {
             operationGF = "multiplication";
+            genPolynomialBox.Enabled = true;
         }
 
         private void radioButtonDiv_CheckedChanged(object sender, EventArgs e)
         {
             operationGF = "division";
+            genPolynomialBox.Enabled = true;
         }
 
         private void textBoxA_TextChanged(object sender, EventArgs e)
@@ -226,5 +284,59 @@ namespace Galois_fields
             labelS10.Text = labelResult.Text;
         }
 
+        private void genPolynomial_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (genPolynomialBox.Text)
+            {
+                case "x⁸+x⁴+x³+x²+1":
+                    genPolynomial = 0x11D;
+                    break;
+                case "x⁸+x⁵+x³+x+1":
+                    genPolynomial = 0x12B;
+                    break;
+                case "x⁸+x⁵+x³+x²+1":
+                    genPolynomial = 0x12D;
+                    break;
+                case "x⁸+x⁶+x³+x²+1":
+                    genPolynomial = 0x14D;
+                    break;
+                case "x⁸+x⁶+x⁴+x³+x²+x+1":
+                    genPolynomial = 0x15F;
+                    break;
+                case "x⁸+x⁶+x⁵+x+1":
+                    genPolynomial = 0x163;
+                    break;
+                case "x⁸+x⁶+x⁵+x²+1":
+                    genPolynomial = 0x165;
+                    break;
+                case "x⁸+x⁶+x⁵+x³+1":
+                    genPolynomial = 0x169;
+                    break;
+                case "x⁸+x⁶+x⁵+x⁴+1":
+                    genPolynomial = 0x171;
+                    break;
+                case "x⁸+x⁷+x²+x+1":
+                    genPolynomial = 0x187;
+                    break;
+                case "x⁸+x⁷+x³+x²+1":
+                    genPolynomial = 0x18D;
+                    break;
+                case "x⁸+x⁷+x⁵+x³+1":
+                    genPolynomial = 0x1A9;
+                    break;
+                case "x⁸+x⁷+x⁶+x+1":
+                    genPolynomial = 0x1C3;
+                    break;
+                case "x⁸+x⁷+x⁶+x³+x²+x+1":
+                    genPolynomial = 0x1CF;
+                    break;
+                case "x⁸+x⁷+x⁶+x⁵+x²+x+1":
+                    genPolynomial = 0x1E7;
+                    break;
+                case "x⁸+x⁷+x⁶+x⁵+x⁴+x²+1":
+                    genPolynomial = 0x1F5;
+                    break;
+            }
+        }
     }
 }
