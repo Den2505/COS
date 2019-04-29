@@ -287,12 +287,12 @@
             // 
             // labelA10
             // 
-            this.labelA10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelA10.Location = new System.Drawing.Point(210, 190);
+            this.labelA10.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelA10.Location = new System.Drawing.Point(89, 548);
             this.labelA10.Name = "labelA10";
-            this.labelA10.Size = new System.Drawing.Size(33, 19);
-            this.labelA10.TabIndex = 13;
-            this.labelA10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelA10.Size = new System.Drawing.Size(50, 22);
+            this.labelA10.TabIndex = 22;
+            this.labelA10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.labelA10.Visible = false;
             // 
             // labelS1
@@ -399,28 +399,28 @@
             // 
             this.genPolynomialBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.genPolynomialBox.Enabled = false;
-            this.genPolynomialBox.Font = new System.Drawing.Font("Times New Roman", 14F);
+            this.genPolynomialBox.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.genPolynomialBox.FormattingEnabled = true;
             this.genPolynomialBox.Items.AddRange(new object[] {
-            "x⁸+x⁴+x³+x²+1",
-            "x⁸+x⁵+x³+x+1",
-            "x⁸+x⁵+x³+x²+1",
-            "x⁸+x⁶+x³+x²+1",
-            "x⁸+x⁶+x⁴+x³+x²+x+1",
-            "x⁸+x⁶+x⁵+x+1",
-            "x⁸+x⁶+x⁵+x²+1",
-            "x⁸+x⁶+x⁵+x³+1",
-            "x⁸+x⁶+x⁵+x⁴+1",
-            "x⁸+x⁷+x²+x+1",
-            "x⁸+x⁷+x³+x²+1",
-            "x⁸+x⁷+x⁵+x³+1",
-            "x⁸+x⁷+x⁶+x+1",
-            "x⁸+x⁷+x⁶+x³+x²+x+1",
-            "x⁸+x⁷+x⁶+x⁵+x²+x+1",
-            "x⁸+x⁷+x⁶+x⁵+x⁴+x²+1"});
+            "x^8+x^4+x^3+x^2+1",
+            "x^8+x^5+x^3+x+1",
+            "x^8+x^5+x^3+x^2+1",
+            "x^8+x^6+x^3+x^2+1",
+            "x^8+x^6+x^4+x^3+x^2+x+1",
+            "x^8+x^6+x^5+x+1",
+            "x^8+x^6+x^5+x^2+1",
+            "x^8+x^6+x^5+x^3+1",
+            "x^8+x^6+x^5+x^4+1",
+            "x^8+x^7+x^2+x+1",
+            "x^8+x^7+x^3+x^2+1",
+            "x^8+x^7+x^5+x^3+1",
+            "x^8+x^7+x^6+x+1",
+            "x^8+x^7+x^6+x^3+x^2+x+1",
+            "x^8+x^7+x^6+x^5+x^2+x+1",
+            "x^8+x^7+x^6+x^5+x^4+x^2+1"});
             this.genPolynomialBox.Location = new System.Drawing.Point(228, 6);
             this.genPolynomialBox.Name = "genPolynomialBox";
-            this.genPolynomialBox.Size = new System.Drawing.Size(193, 29);
+            this.genPolynomialBox.Size = new System.Drawing.Size(208, 27);
             this.genPolynomialBox.TabIndex = 23;
             this.genPolynomialBox.Tag = "";
             this.genPolynomialBox.SelectedIndexChanged += new System.EventHandler(this.genPolynomial_SelectedIndexChanged);

@@ -288,52 +288,52 @@ namespace Galois_fields
         {
             switch (genPolynomialBox.Text)
             {
-                case "x⁸+x⁴+x³+x²+1":
+                case "x^8+x^4+x^3+x^2+1":
                     genPolynomial = 0x11D;
                     break;
-                case "x⁸+x⁵+x³+x+1":
+                case "x^8+x^5+x^3+x+1":
                     genPolynomial = 0x12B;
                     break;
-                case "x⁸+x⁵+x³+x²+1":
+                case "x^8+x^5+x^3+x^2+1":
                     genPolynomial = 0x12D;
                     break;
-                case "x⁸+x⁶+x³+x²+1":
+                case "x^8+x^6+x^3+x^2+1":
                     genPolynomial = 0x14D;
                     break;
-                case "x⁸+x⁶+x⁴+x³+x²+x+1":
+                case "x^8+x^6+x^4+x^3+x^2+x+1":
                     genPolynomial = 0x15F;
                     break;
-                case "x⁸+x⁶+x⁵+x+1":
+                case "x^8+x^6+x^5+x+1":
                     genPolynomial = 0x163;
                     break;
-                case "x⁸+x⁶+x⁵+x²+1":
+                case "x^8+x^6+x^5+x^2+1":
                     genPolynomial = 0x165;
                     break;
-                case "x⁸+x⁶+x⁵+x³+1":
+                case "x^8+x^6+x^5+x^3+1":
                     genPolynomial = 0x169;
                     break;
-                case "x⁸+x⁶+x⁵+x⁴+1":
+                case "x^8+x^6+x^5+x^4+1":
                     genPolynomial = 0x171;
                     break;
-                case "x⁸+x⁷+x²+x+1":
+                case "x^8+x^7+x^2+x+1":
                     genPolynomial = 0x187;
                     break;
-                case "x⁸+x⁷+x³+x²+1":
+                case "x^8+x^7+x^3+x^2+1":
                     genPolynomial = 0x18D;
                     break;
-                case "x⁸+x⁷+x⁵+x³+1":
+                case "x^8+x^7+x^5+x^3+1":
                     genPolynomial = 0x1A9;
                     break;
-                case "x⁸+x⁷+x⁶+x+1":
+                case "x^8+x^7+x^6+x+1":
                     genPolynomial = 0x1C3;
                     break;
-                case "x⁸+x⁷+x⁶+x³+x²+x+1":
+                case "x^8+x^7+x^6+x^3+x^2+x+1":
                     genPolynomial = 0x1CF;
                     break;
-                case "x⁸+x⁷+x⁶+x⁵+x²+x+1":
+                case "x^8+x^7+x^6+x^5+x^2+x+1":
                     genPolynomial = 0x1E7;
                     break;
-                case "x⁸+x⁷+x⁶+x⁵+x⁴+x²+1":
+                case "x^8+x^7+x^6+x^5+x^4+x^2+1":
                     genPolynomial = 0x1F5;
                     break;
             }
