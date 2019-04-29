@@ -107,7 +107,7 @@
             this.radioButtonApp.AutoSize = true;
             this.radioButtonApp.Checked = true;
             this.radioButtonApp.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButtonApp.Location = new System.Drawing.Point(16, 91);
+            this.radioButtonApp.Location = new System.Drawing.Point(144, 6);
             this.radioButtonApp.Name = "radioButtonApp";
             this.radioButtonApp.Size = new System.Drawing.Size(59, 23);
             this.radioButtonApp.TabIndex = 4;
@@ -120,7 +120,7 @@
             // 
             this.radioButtonSub.AutoSize = true;
             this.radioButtonSub.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButtonSub.Location = new System.Drawing.Point(16, 121);
+            this.radioButtonSub.Location = new System.Drawing.Point(144, 36);
             this.radioButtonSub.Name = "radioButtonSub";
             this.radioButtonSub.Size = new System.Drawing.Size(56, 23);
             this.radioButtonSub.TabIndex = 5;
@@ -133,7 +133,7 @@
             // 
             this.radioButtonMul.AutoSize = true;
             this.radioButtonMul.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButtonMul.Location = new System.Drawing.Point(16, 151);
+            this.radioButtonMul.Location = new System.Drawing.Point(144, 66);
             this.radioButtonMul.Name = "radioButtonMul";
             this.radioButtonMul.Size = new System.Drawing.Size(58, 23);
             this.radioButtonMul.TabIndex = 6;
@@ -146,7 +146,7 @@
             // 
             this.radioButtonDiv.AutoSize = true;
             this.radioButtonDiv.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButtonDiv.Location = new System.Drawing.Point(16, 181);
+            this.radioButtonDiv.Location = new System.Drawing.Point(144, 96);
             this.radioButtonDiv.Name = "radioButtonDiv";
             this.radioButtonDiv.Size = new System.Drawing.Size(54, 23);
             this.radioButtonDiv.TabIndex = 7;
@@ -159,7 +159,7 @@
             // 
             this.buttonResult.Enabled = false;
             this.buttonResult.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonResult.Location = new System.Drawing.Point(16, 263);
+            this.buttonResult.Location = new System.Drawing.Point(16, 89);
             this.buttonResult.Name = "buttonResult";
             this.buttonResult.Size = new System.Drawing.Size(108, 30);
             this.buttonResult.TabIndex = 8;
@@ -171,7 +171,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(16, 315);
+            this.label3.Location = new System.Drawing.Point(228, 98);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(0, 22);
             this.label3.TabIndex = 9;
@@ -181,7 +181,7 @@
             // 
             this.labelResult.AutoSize = true;
             this.labelResult.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.labelResult.Location = new System.Drawing.Point(67, 315);
+            this.labelResult.Location = new System.Drawing.Point(279, 98);
             this.labelResult.Name = "labelResult";
             this.labelResult.Size = new System.Drawing.Size(0, 19);
             this.labelResult.TabIndex = 10;
@@ -189,7 +189,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.pictureBox1.Location = new System.Drawing.Point(156, 6);
+            this.pictureBox1.Location = new System.Drawing.Point(16, 146);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(477, 499);
             this.pictureBox1.TabIndex = 11;
@@ -198,7 +198,7 @@
             // labelA1
             // 
             this.labelA1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelA1.Location = new System.Drawing.Point(350, 50);
+            this.labelA1.Location = new System.Drawing.Point(210, 190);
             this.labelA1.Name = "labelA1";
             this.labelA1.Size = new System.Drawing.Size(33, 19);
             this.labelA1.TabIndex = 13;
@@ -208,7 +208,7 @@
             // labelA2
             // 
             this.labelA2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelA2.Location = new System.Drawing.Point(350, 76);
+            this.labelA2.Location = new System.Drawing.Point(210, 216);
             this.labelA2.Name = "labelA2";
             this.labelA2.Size = new System.Drawing.Size(33, 19);
             this.labelA2.TabIndex = 14;
@@ -218,7 +218,7 @@
             // labelA3
             // 
             this.labelA3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelA3.Location = new System.Drawing.Point(412, 50);
+            this.labelA3.Location = new System.Drawing.Point(272, 190);
             this.labelA3.Name = "labelA3";
             this.labelA3.Size = new System.Drawing.Size(73, 19);
             this.labelA3.TabIndex = 15;
@@ -228,7 +228,7 @@
             // labelA4
             // 
             this.labelA4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelA4.Location = new System.Drawing.Point(412, 76);
+            this.labelA4.Location = new System.Drawing.Point(272, 216);
             this.labelA4.Name = "labelA4";
             this.labelA4.Size = new System.Drawing.Size(73, 19);
             this.labelA4.TabIndex = 16;
@@ -238,7 +238,7 @@
             // labelA5
             // 
             this.labelA5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelA5.Location = new System.Drawing.Point(398, 141);
+            this.labelA5.Location = new System.Drawing.Point(258, 281);
             this.labelA5.Name = "labelA5";
             this.labelA5.Size = new System.Drawing.Size(73, 19);
             this.labelA5.TabIndex = 17;
@@ -248,7 +248,7 @@
             // labelA6
             // 
             this.labelA6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelA6.Location = new System.Drawing.Point(398, 160);
+            this.labelA6.Location = new System.Drawing.Point(258, 300);
             this.labelA6.Name = "labelA6";
             this.labelA6.Size = new System.Drawing.Size(73, 19);
             this.labelA6.TabIndex = 18;
@@ -258,7 +258,7 @@
             // labelA7
             // 
             this.labelA7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelA7.Location = new System.Drawing.Point(398, 185);
+            this.labelA7.Location = new System.Drawing.Point(258, 325);
             this.labelA7.Name = "labelA7";
             this.labelA7.Size = new System.Drawing.Size(73, 19);
             this.labelA7.TabIndex = 19;
@@ -268,7 +268,7 @@
             // labelA8
             // 
             this.labelA8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelA8.Location = new System.Drawing.Point(303, 376);
+            this.labelA8.Location = new System.Drawing.Point(163, 516);
             this.labelA8.Name = "labelA8";
             this.labelA8.Size = new System.Drawing.Size(73, 19);
             this.labelA8.TabIndex = 20;
@@ -278,7 +278,7 @@
             // labelA9
             // 
             this.labelA9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelA9.Location = new System.Drawing.Point(405, 376);
+            this.labelA9.Location = new System.Drawing.Point(265, 516);
             this.labelA9.Name = "labelA9";
             this.labelA9.Size = new System.Drawing.Size(33, 19);
             this.labelA9.TabIndex = 21;
@@ -287,18 +287,18 @@
             // 
             // labelA10
             // 
-            this.labelA10.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelA10.Location = new System.Drawing.Point(229, 408);
+            this.labelA10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelA10.Location = new System.Drawing.Point(210, 190);
             this.labelA10.Name = "labelA10";
-            this.labelA10.Size = new System.Drawing.Size(50, 22);
-            this.labelA10.TabIndex = 22;
-            this.labelA10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelA10.Size = new System.Drawing.Size(33, 19);
+            this.labelA10.TabIndex = 13;
+            this.labelA10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.labelA10.Visible = false;
             // 
             // labelS1
             // 
             this.labelS1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelS1.Location = new System.Drawing.Point(350, 50);
+            this.labelS1.Location = new System.Drawing.Point(210, 190);
             this.labelS1.Name = "labelS1";
             this.labelS1.Size = new System.Drawing.Size(33, 19);
             this.labelS1.TabIndex = 13;
@@ -308,7 +308,7 @@
             // labelS2
             // 
             this.labelS2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelS2.Location = new System.Drawing.Point(350, 76);
+            this.labelS2.Location = new System.Drawing.Point(210, 216);
             this.labelS2.Name = "labelS2";
             this.labelS2.Size = new System.Drawing.Size(33, 19);
             this.labelS2.TabIndex = 14;
@@ -318,7 +318,7 @@
             // labelS3
             // 
             this.labelS3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelS3.Location = new System.Drawing.Point(412, 50);
+            this.labelS3.Location = new System.Drawing.Point(272, 190);
             this.labelS3.Name = "labelS3";
             this.labelS3.Size = new System.Drawing.Size(73, 19);
             this.labelS3.TabIndex = 15;
@@ -328,7 +328,7 @@
             // labelS4
             // 
             this.labelS4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelS4.Location = new System.Drawing.Point(412, 76);
+            this.labelS4.Location = new System.Drawing.Point(272, 216);
             this.labelS4.Name = "labelS4";
             this.labelS4.Size = new System.Drawing.Size(73, 19);
             this.labelS4.TabIndex = 16;
@@ -338,7 +338,7 @@
             // labelS5
             // 
             this.labelS5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelS5.Location = new System.Drawing.Point(398, 141);
+            this.labelS5.Location = new System.Drawing.Point(258, 281);
             this.labelS5.Name = "labelS5";
             this.labelS5.Size = new System.Drawing.Size(73, 19);
             this.labelS5.TabIndex = 17;
@@ -348,7 +348,7 @@
             // labelS6
             // 
             this.labelS6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelS6.Location = new System.Drawing.Point(398, 160);
+            this.labelS6.Location = new System.Drawing.Point(258, 300);
             this.labelS6.Name = "labelS6";
             this.labelS6.Size = new System.Drawing.Size(73, 19);
             this.labelS6.TabIndex = 18;
@@ -358,7 +358,7 @@
             // labelS7
             // 
             this.labelS7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelS7.Location = new System.Drawing.Point(398, 185);
+            this.labelS7.Location = new System.Drawing.Point(258, 325);
             this.labelS7.Name = "labelS7";
             this.labelS7.Size = new System.Drawing.Size(73, 19);
             this.labelS7.TabIndex = 19;
@@ -368,7 +368,7 @@
             // labelS8
             // 
             this.labelS8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelS8.Location = new System.Drawing.Point(303, 376);
+            this.labelS8.Location = new System.Drawing.Point(163, 516);
             this.labelS8.Name = "labelS8";
             this.labelS8.Size = new System.Drawing.Size(73, 19);
             this.labelS8.TabIndex = 20;
@@ -378,7 +378,7 @@
             // labelS9
             // 
             this.labelS9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelS9.Location = new System.Drawing.Point(405, 376);
+            this.labelS9.Location = new System.Drawing.Point(265, 516);
             this.labelS9.Name = "labelS9";
             this.labelS9.Size = new System.Drawing.Size(33, 19);
             this.labelS9.TabIndex = 21;
@@ -388,7 +388,7 @@
             // labelS10
             // 
             this.labelS10.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelS10.Location = new System.Drawing.Point(229, 408);
+            this.labelS10.Location = new System.Drawing.Point(89, 548);
             this.labelS10.Name = "labelS10";
             this.labelS10.Size = new System.Drawing.Size(50, 22);
             this.labelS10.TabIndex = 22;
@@ -418,7 +418,7 @@
             "x⁸+x⁷+x⁶+x³+x²+x+1",
             "x⁸+x⁷+x⁶+x⁵+x²+x+1",
             "x⁸+x⁷+x⁶+x⁵+x⁴+x²+1"});
-            this.genPolynomialBox.Location = new System.Drawing.Point(16, 210);
+            this.genPolynomialBox.Location = new System.Drawing.Point(228, 6);
             this.genPolynomialBox.Name = "genPolynomialBox";
             this.genPolynomialBox.Size = new System.Drawing.Size(193, 29);
             this.genPolynomialBox.TabIndex = 23;
@@ -432,7 +432,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(1026, 522);
+            this.ClientSize = new System.Drawing.Size(503, 650);
             this.Controls.Add(this.genPolynomialBox);
             this.Controls.Add(this.labelS10);
             this.Controls.Add(this.labelS9);
