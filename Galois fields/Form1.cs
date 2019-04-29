@@ -16,49 +16,68 @@ namespace Galois_fields
         {
             InitializeComponent();
         }
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            //Перегруженная функция , выполняется каждый раз, когда обновляется форма примерно раз в секунду, поэтому снизу q==0, чтобы выполнилось 1 раз
+            base.OnPaint(e);
+            if (!_addLabCheck)
+            {
+                addLabelsToMas();
+            }
+        }
+
+        private string _operationGF = "addition";
+        private List<Label> _labelAddSubMas = new List<Label>();
+        private bool _addLabCheck = false;
 
         private void button1_Click(object sender, EventArgs e)
         {
             byte a = Convert.ToByte(textBoxA.Text);
             byte b = Convert.ToByte(textBoxB.Text);
-            if (operationGF == "addition")
+            if (_operationGF == "addition")
             {
-                label3.Text = "a + b =";
+                label3.Text = "a + b = " + Convert.ToString(operationAdd(a, b));
                 labelResult.Text = Convert.ToString(operationAdd(a, b));
-                pictureBox1.Image = Properties.Resources.imgAdd;
-                disableVisibleSubtractionLables();
+                //  pictureBox1.Image = Properties.Resources.imgAdd;
+
+                //  disableVisibleSubtractionLables();
                 //офф
-                enableVisibleAdditionLables();
+                enableVisibleAdditionAndSubstractionLables();
                 operationAdditionExpand();
             }
-            if (operationGF == "subtraction")
+            if (_operationGF == "subtraction")
             {
-                label3.Text = "a - b =";
+                label3.Text = "a - b = " + Convert.ToString(operationSub(a, b));
                 labelResult.Text = Convert.ToString(operationSub(a, b));
-                pictureBox1.Image = Properties.Resources.imgSub;
-                disableVisibleAdditionLables();
+                //  pictureBox1.Image = Properties.Resources.imgSub;
+
+                enableVisibleAdditionAndSubstractionLables();
+                //  disableVisibleAdditionLables();
                 //офф
-                enableVisibleSubtractionLables();
+                //  enableVisibleSubtractionLables();
                 operationSubtractionExpand();
             }
-            if (operationGF == "multiplication")
+            if (_operationGF == "multiplication")
             {
-                label3.Text = "a * b =";
+
                 genExpTable();
                 genLogTable();
                 labelResult.Text = Convert.ToString(operationMul(a, b));
+                label3.Text = "a * b = " + Convert.ToString(operationMul(a, b));
                 pictureBox1.Image = null;
-                disableVisibleAdditionLables();
-                disableVisibleSubtractionLables();
+
+                disableVisibleAdditionAndSubstractionLables();
+                //   disableVisibleSubtractionLables();
                 //фон
             }
-            if (operationGF == "division")
+            if (_operationGF == "division")
             {
                 label3.Text = "a / b =";
                 labelResult.Text = null;
                 pictureBox1.Image = null;
-                disableVisibleAdditionLables();
-                disableVisibleSubtractionLables();
+
+                disableVisibleAdditionAndSubstractionLables();
+                //  disableVisibleSubtractionLables();
                 //фон
             }
         }
@@ -78,21 +97,24 @@ namespace Galois_fields
         }
 
         //генерация таблиц
-        private static byte[] exponentialsT = new byte[256];
-        private static byte[] logarithmsT = new byte[256];
-        static int genPolynomial = 0x11D;
+        private static byte[] _exponentialsT = new byte[256];
+        private static byte[] _logarithmsT = new byte[256];
+        static int _genPolynomial = 0x11D;
         private static byte mul_table(byte at, byte bt)
         {
             byte resultMul = 0;
             byte temp;
-            while(at != 0){
-                if ((at & 1) != 0){
+            while (at != 0)
+            {
+                if ((at & 1) != 0)
+                {
                     resultMul = (byte)(resultMul ^ bt);
                 }
                 temp = (byte)(bt & 0x80);
                 bt = (byte)(bt << 1);
-                if (temp != 0){
-                    bt = (byte)(bt ^(genPolynomial & 0xff));
+                if (temp != 0)
+                {
+                    bt = (byte)(bt ^ (_genPolynomial & 0xff));
                 }
                 at = (byte)(at >> 1);
             }
@@ -102,18 +124,18 @@ namespace Galois_fields
         private void genExpTable()
         {
             byte temp = (byte)0x01;
-            for(int i=0; i < 256; i++)
+            for (int i = 0; i < 256; i++)
             {
-                exponentialsT[i] = temp;
+                _exponentialsT[i] = temp;
                 temp = mul_table(temp, (byte)0x02);
             }
         }
 
         private void genLogTable()
         {
-            for(int i=0; i < 255; i++)
+            for (int i = 0; i < 255; i++)
             {
-                logarithmsT[exponentialsT[i]] = (byte)i;
+                _logarithmsT[_exponentialsT[i]] = (byte)i;
             }
         }
         //
@@ -121,37 +143,58 @@ namespace Galois_fields
         private static byte operationMul(byte a, byte b)
         {
             byte resMul = 0;
-            if((a != 0)&(b != 0)){
-                byte temp = (byte)((logarithmsT[a] + logarithmsT[b]) % 255);
-                resMul = exponentialsT[temp];
+            if ((a != 0) & (b != 0))
+            {
+                byte temp = (byte)((_logarithmsT[a] + _logarithmsT[b]) % 255);
+                resMul = _exponentialsT[temp];
             }
             return resMul;
             //MUL
         }
 
-        string operationGF = "addition";
+
         private void radioButtonApp_CheckedChanged(object sender, EventArgs e)
         {
-            operationGF = "addition";
+            pictureBox1.Image = Properties.Resources.imgAdd;
+            _operationGF = "addition";
             genPolynomialBox.Enabled = false;
+
+            label3.Text = null;
+            labelResult.Text = null;
+            clearAdditionAndSubstractionLables();
         }
 
         private void radioButtonSub_CheckedChanged(object sender, EventArgs e)
         {
-            operationGF = "subtraction";
+            pictureBox1.Image = Properties.Resources.imgSub;
+            _operationGF = "subtraction";
             genPolynomialBox.Enabled = false;
+
+            label3.Text = null;
+            labelResult.Text = null;
+            clearAdditionAndSubstractionLables();
         }
 
         private void radioButtonMul_CheckedChanged(object sender, EventArgs e)
         {
-            operationGF = "multiplication";
+            pictureBox1.Image = null;
+            _operationGF = "multiplication";
             genPolynomialBox.Enabled = true;
+
+            label3.Text = null;
+            labelResult.Text = null;
+            clearAdditionAndSubstractionLables();
         }
 
         private void radioButtonDiv_CheckedChanged(object sender, EventArgs e)
         {
-            operationGF = "division";
+            pictureBox1.Image = null;
+            _operationGF = "division";
             genPolynomialBox.Enabled = true;
+
+            label3.Text = null;
+            labelResult.Text = null;
+            clearAdditionAndSubstractionLables();
         }
 
         private void textBoxA_TextChanged(object sender, EventArgs e)
@@ -174,7 +217,8 @@ namespace Galois_fields
             }
             else
             {
-                if (textBoxTemp.Text != "") {
+                if (textBoxTemp.Text != "")
+                {
                     short bTemp = Convert.ToInt16(textBoxTemp.Text);
                     if ((bTemp < 0) | (bTemp > 255))
                     {
@@ -197,64 +241,97 @@ namespace Galois_fields
         }
 
 
-        //
-        private void enableVisibleAdditionLables()
+        private void addLabelsToMas()
         {
-            labelA1.Visible = true;
-            labelA2.Visible = true;
-            labelA3.Visible = true;
-            labelA4.Visible = true;
-            labelA5.Visible = true;
-            labelA6.Visible = true;
-            labelA7.Visible = true;
-            labelA8.Visible = true;
-            labelA9.Visible = true;
-            labelA10.Visible = true;
+            _addLabCheck = true;
+            _labelAddSubMas.Add(labelA1);
+            _labelAddSubMas.Add(labelA2);
+            _labelAddSubMas.Add(labelA3);
+            _labelAddSubMas.Add(labelA4);
+            _labelAddSubMas.Add(labelA5);
+            _labelAddSubMas.Add(labelA6);
+            _labelAddSubMas.Add(labelA7);
+            _labelAddSubMas.Add(labelA8);
+            _labelAddSubMas.Add(labelA9);
+            _labelAddSubMas.Add(labelA10);
+        }
+
+        //
+        private void enableVisibleAdditionAndSubstractionLables()
+        {
+            foreach (Label iLabel in _labelAddSubMas)
+            {
+                iLabel.Visible = true;
+            }
+
+            //labelA1.Visible = true;
+            //labelA2.Visible = true;
+            //labelA3.Visible = true;
+            //labelA4.Visible = true;
+            //labelA5.Visible = true;
+            //labelA6.Visible = true;
+            //labelA7.Visible = true;
+            //labelA8.Visible = true;
+            //labelA9.Visible = true;
+            //labelA10.Visible = true;
             //
         }
-        private void disableVisibleAdditionLables()
+        private void disableVisibleAdditionAndSubstractionLables()
         {
-            labelA1.Visible = false;
-            labelA2.Visible = false;
-            labelA3.Visible = false;
-            labelA4.Visible = false;
-            labelA5.Visible = false;
-            labelA6.Visible = false;
-            labelA7.Visible = false;
-            labelA8.Visible = false;
-            labelA9.Visible = false;
-            labelA10.Visible = false;
+            foreach (Label iLabel in _labelAddSubMas)
+            {
+                iLabel.Visible = false;
+            }
+
+            //labelA1.Visible = false;
+            //labelA2.Visible = false;
+            //labelA3.Visible = false;
+            //labelA4.Visible = false;
+            //labelA5.Visible = false;
+            //labelA6.Visible = false;
+            //labelA7.Visible = false;
+            //labelA8.Visible = false;
+            //labelA9.Visible = false;
+            //labelA10.Visible = false;
             //
         }
 
-        private void enableVisibleSubtractionLables()
+        private void clearAdditionAndSubstractionLables()
         {
-            labelS1.Visible = true;
-            labelS2.Visible = true;
-            labelS3.Visible = true;
-            labelS4.Visible = true;
-            labelS5.Visible = true;
-            labelS6.Visible = true;
-            labelS7.Visible = true;
-            labelS8.Visible = true;
-            labelS9.Visible = true;
-            labelS10.Visible = true;
-            //
+            foreach (Label iLabel in _labelAddSubMas)
+            {
+                iLabel.Text = null;
+            }
         }
-        private void disableVisibleSubtractionLables()
-        {
-            labelS1.Visible = false;
-            labelS2.Visible = false;
-            labelS3.Visible = false;
-            labelS4.Visible = false;
-            labelS5.Visible = false;
-            labelS6.Visible = false;
-            labelS7.Visible = false;
-            labelS8.Visible = false;
-            labelS9.Visible = false;
-            labelS10.Visible = false;
-            //
-        }
+
+        //private void enableVisibleSubtractionLables()
+        //{
+        //    labelS1.Visible = true;
+        //    labelS2.Visible = true;
+        //    labelS3.Visible = true;
+        //    labelS4.Visible = true;
+        //    labelS5.Visible = true;
+        //    labelS6.Visible = true;
+        //    labelS7.Visible = true;
+        //    labelS8.Visible = true;
+        //    labelS9.Visible = true;
+        //    labelS10.Visible = true;
+        //    //
+        //}
+        //private void disableVisibleSubtractionLables()
+        //{
+        //    labelS1.Visible = false;
+        //    labelS2.Visible = false;
+        //    labelS3.Visible = false;
+        //    labelS4.Visible = false;
+        //    labelS5.Visible = false;
+        //    labelS6.Visible = false;
+        //    labelS7.Visible = false;
+        //    labelS8.Visible = false;
+        //    labelS9.Visible = false;
+        //    labelS10.Visible = false;
+        //    //
+        //}
 
         private void operationAdditionExpand()
         {
@@ -272,16 +349,16 @@ namespace Galois_fields
 
         private void operationSubtractionExpand()
         {
-            labelS1.Text = textBoxA.Text;
-            labelS2.Text = textBoxB.Text;
-            labelS3.Text = Convert.ToString(Convert.ToByte(labelS1.Text), 2).PadLeft(8, '0');
-            labelS4.Text = Convert.ToString(Convert.ToByte(labelS2.Text), 2).PadLeft(8, '0');
-            labelS5.Text = labelS3.Text;
-            labelS6.Text = labelS4.Text;
-            labelS7.Text = Convert.ToString(Convert.ToByte(labelResult.Text), 2).PadLeft(8, '0');
-            labelS8.Text = labelS7.Text;
-            labelS9.Text = labelResult.Text;
-            labelS10.Text = labelResult.Text;
+            labelA1.Text = textBoxA.Text;
+            labelA2.Text = textBoxB.Text;
+            labelA3.Text = Convert.ToString(Convert.ToByte(labelA1.Text), 2).PadLeft(8, '0');
+            labelA4.Text = Convert.ToString(Convert.ToByte(labelA2.Text), 2).PadLeft(8, '0');
+            labelA5.Text = labelA3.Text;
+            labelA6.Text = labelA4.Text;
+            labelA7.Text = Convert.ToString(Convert.ToByte(labelResult.Text), 2).PadLeft(8, '0');
+            labelA8.Text = labelA7.Text;
+            labelA9.Text = labelResult.Text;
+            labelA10.Text = labelResult.Text;
         }
 
         private void genPolynomial_SelectedIndexChanged(object sender, EventArgs e)
@@ -289,54 +366,94 @@ namespace Galois_fields
             switch (genPolynomialBox.Text)
             {
                 case "x^8+x^4+x^3+x^2+1":
-                    genPolynomial = 0x11D;
+                    _genPolynomial = 0x11D;
                     break;
                 case "x^8+x^5+x^3+x+1":
-                    genPolynomial = 0x12B;
+                    _genPolynomial = 0x12B;
                     break;
                 case "x^8+x^5+x^3+x^2+1":
-                    genPolynomial = 0x12D;
+                    _genPolynomial = 0x12D;
                     break;
                 case "x^8+x^6+x^3+x^2+1":
-                    genPolynomial = 0x14D;
+                    _genPolynomial = 0x14D;
                     break;
                 case "x^8+x^6+x^4+x^3+x^2+x+1":
-                    genPolynomial = 0x15F;
+                    _genPolynomial = 0x15F;
                     break;
                 case "x^8+x^6+x^5+x+1":
-                    genPolynomial = 0x163;
+                    _genPolynomial = 0x163;
                     break;
                 case "x^8+x^6+x^5+x^2+1":
-                    genPolynomial = 0x165;
+                    _genPolynomial = 0x165;
                     break;
                 case "x^8+x^6+x^5+x^3+1":
-                    genPolynomial = 0x169;
+                    _genPolynomial = 0x169;
                     break;
                 case "x^8+x^6+x^5+x^4+1":
-                    genPolynomial = 0x171;
+                    _genPolynomial = 0x171;
                     break;
                 case "x^8+x^7+x^2+x+1":
-                    genPolynomial = 0x187;
+                    _genPolynomial = 0x187;
                     break;
                 case "x^8+x^7+x^3+x^2+1":
-                    genPolynomial = 0x18D;
+                    _genPolynomial = 0x18D;
                     break;
                 case "x^8+x^7+x^5+x^3+1":
-                    genPolynomial = 0x1A9;
+                    _genPolynomial = 0x1A9;
                     break;
                 case "x^8+x^7+x^6+x+1":
-                    genPolynomial = 0x1C3;
+                    _genPolynomial = 0x1C3;
                     break;
                 case "x^8+x^7+x^6+x^3+x^2+x+1":
-                    genPolynomial = 0x1CF;
+                    _genPolynomial = 0x1CF;
                     break;
                 case "x^8+x^7+x^6+x^5+x^2+x+1":
-                    genPolynomial = 0x1E7;
+                    _genPolynomial = 0x1E7;
                     break;
                 case "x^8+x^7+x^6+x^5+x^4+x^2+1":
-                    genPolynomial = 0x1F5;
+                    _genPolynomial = 0x1F5;
                     break;
             }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelS1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelA4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelA6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelResult_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

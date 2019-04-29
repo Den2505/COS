@@ -117,4 +117,29 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA
+        AAD/////z8/P/0dHR/9HR0f/R0dH/0dHR/9HR0f/R0dH/0dHR/9HR0f/R0dH/0dHR/9HR0f/z8/P////
+        /////////////0dHR/+MjIz/ycnJ/8nJyf/Jycn/ycnJ/8nJyf/Jycn/ycnJ/8nJyf/Jycn/jIyM/0dH
+        R/////////////////9ISEj/zMzM/8zMzP/MzMz/zMzM/8zMzP/MzMz/zMzM/8zMzP/MzMz/y8vL/8zM
+        zP9ISEj/////////////////SUlJ/9DQ0P/Q0ND/U1NT/9DQ0P9TU1P/0NDQ/1NTU//Q0ND/U1NT/9DQ
+        0P/Q0ND/SkpK/////////////////0tLS//U1NT/1NTU/9TU1P/U1NT/1NTU/9TU1P/U1NT/1NTU/9TU
+        1P/U1NT/1NTU/0tLS/////////////////9NTU3/2dnZ/9nZ2f9TU1P/2dnZ/1NTU//Z2dn/U1NT/9nZ
+        2f9TU1P/2dnZ/9nZ2f9NTU3/////////////////T09P/97e3v/d3d3/3t7e/97e3v/e3t7/3t7e/97e
+        3v/e3t7/3t7e/97e3v/d3d3/T09P/////////////////1FRUf/j4+P/4uLi/1NTU//i4uL/U1NT/+Li
+        4v9TU1P/4uLi/1NTU//i4uL/4+Pj/1FRUf////////////////9TU1P/5+fn/+fn5//n5+f/6Ojo/+fn
+        5//n5+f/6Ojo/+jo6P/o6Oj/5+fn/+fn5/9TU1P/////////////////VVVV/+zs7P/s7Oz/7Ozs/+zs
+        7P/s7Oz/7Ozs/+zs7P/s7Oz/7Ozs/+zs7P/s7Oz/VVVV/////////////////1dXV//x8fH/8vLy/2Nj
+        Y/9jY2P/Y2Nj/2NjY/9jY2P/Y2Nj/2NjY//x8fH/8fHx/1dXV/////////////////9ZWVn/9fX1//X1
+        9f+CgoL/goKC/4KCgv+CgoL/goKC/4KCgv+CgoL/9fX1//X19f9ZWVn/////////////////Wlpa//n5
+        +f/5+fn/nZ2d/52dnf+dnZ3/nZ2d/52dnf+dnZ3/nZ2d//r6+v/5+fn/Wlpa/////////////////1tb
+        W//8/Pz//Pz8//z8/P/8/Pz//f39//39/f/8/Pz//f39//z8/P/8/Pz//Pz8/1tbW///////////////
+        //9bW1v/zc3N/////////////////////////////////////////////////83Nzf9bW1v/////////
+        ////////z8/P/1tbW/9bW1v/W1tb/1tbW/9bW1v/W1tb/1tbW/9bW1v/W1tb/1tbW/9bW1v/z8/P////
+        ////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAA==
+</value>
+  </data>
 </root>
