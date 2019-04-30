@@ -40,16 +40,16 @@
             this.buttonResult = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.labelA1 = new System.Windows.Forms.Label();
-            this.labelA2 = new System.Windows.Forms.Label();
-            this.labelA3 = new System.Windows.Forms.Label();
-            this.labelA4 = new System.Windows.Forms.Label();
-            this.labelA5 = new System.Windows.Forms.Label();
-            this.labelA6 = new System.Windows.Forms.Label();
-            this.labelA7 = new System.Windows.Forms.Label();
-            this.labelA8 = new System.Windows.Forms.Label();
-            this.labelA9 = new System.Windows.Forms.Label();
-            this.labelA10 = new System.Windows.Forms.Label();
+            this.labelAS1 = new System.Windows.Forms.Label();
+            this.labelAS2 = new System.Windows.Forms.Label();
+            this.labelAS3 = new System.Windows.Forms.Label();
+            this.labelAS4 = new System.Windows.Forms.Label();
+            this.labelAS5 = new System.Windows.Forms.Label();
+            this.labelAS6 = new System.Windows.Forms.Label();
+            this.labelAS7 = new System.Windows.Forms.Label();
+            this.labelAS8 = new System.Windows.Forms.Label();
+            this.labelAS9 = new System.Windows.Forms.Label();
+            this.labelAS10 = new System.Windows.Forms.Label();
             this.genPolynomialBox = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -172,7 +172,6 @@
             this.label3.Size = new System.Drawing.Size(0, 22);
             this.label3.TabIndex = 9;
             this.label3.UseCompatibleTextRendering = true;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // pictureBox1
             // 
@@ -185,109 +184,107 @@
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
-            // labelA1
+            // labelAS1
             // 
-            this.labelA1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelA1.Location = new System.Drawing.Point(200, 201);
-            this.labelA1.Name = "labelA1";
-            this.labelA1.Size = new System.Drawing.Size(33, 19);
-            this.labelA1.TabIndex = 13;
-            this.labelA1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.labelA1.Visible = false;
+            this.labelAS1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelAS1.Location = new System.Drawing.Point(200, 201);
+            this.labelAS1.Name = "labelAS1";
+            this.labelAS1.Size = new System.Drawing.Size(33, 19);
+            this.labelAS1.TabIndex = 13;
+            this.labelAS1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelAS1.Visible = false;
             // 
-            // labelA2
+            // labelAS2
             // 
-            this.labelA2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelA2.Location = new System.Drawing.Point(200, 226);
-            this.labelA2.Name = "labelA2";
-            this.labelA2.Size = new System.Drawing.Size(33, 19);
-            this.labelA2.TabIndex = 14;
-            this.labelA2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.labelA2.Visible = false;
+            this.labelAS2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelAS2.Location = new System.Drawing.Point(200, 226);
+            this.labelAS2.Name = "labelAS2";
+            this.labelAS2.Size = new System.Drawing.Size(33, 19);
+            this.labelAS2.TabIndex = 14;
+            this.labelAS2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelAS2.Visible = false;
             // 
-            // labelA3
+            // labelAS3
             // 
-            this.labelA3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelA3.Location = new System.Drawing.Point(267, 199);
-            this.labelA3.Name = "labelA3";
-            this.labelA3.Size = new System.Drawing.Size(73, 19);
-            this.labelA3.TabIndex = 15;
-            this.labelA3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.labelA3.Visible = false;
+            this.labelAS3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelAS3.Location = new System.Drawing.Point(267, 199);
+            this.labelAS3.Name = "labelAS3";
+            this.labelAS3.Size = new System.Drawing.Size(73, 19);
+            this.labelAS3.TabIndex = 15;
+            this.labelAS3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelAS3.Visible = false;
             // 
-            // labelA4
+            // labelAS4
             // 
-            this.labelA4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelA4.Location = new System.Drawing.Point(267, 226);
-            this.labelA4.Name = "labelA4";
-            this.labelA4.Size = new System.Drawing.Size(73, 19);
-            this.labelA4.TabIndex = 16;
-            this.labelA4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.labelA4.Visible = false;
-            this.labelA4.Click += new System.EventHandler(this.labelA4_Click);
+            this.labelAS4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelAS4.Location = new System.Drawing.Point(267, 226);
+            this.labelAS4.Name = "labelAS4";
+            this.labelAS4.Size = new System.Drawing.Size(73, 19);
+            this.labelAS4.TabIndex = 16;
+            this.labelAS4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelAS4.Visible = false;
             // 
-            // labelA5
+            // labelAS5
             // 
-            this.labelA5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelA5.Location = new System.Drawing.Point(254, 287);
-            this.labelA5.Name = "labelA5";
-            this.labelA5.Size = new System.Drawing.Size(73, 19);
-            this.labelA5.TabIndex = 17;
-            this.labelA5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.labelA5.Visible = false;
+            this.labelAS5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelAS5.Location = new System.Drawing.Point(254, 287);
+            this.labelAS5.Name = "labelAS5";
+            this.labelAS5.Size = new System.Drawing.Size(73, 19);
+            this.labelAS5.TabIndex = 17;
+            this.labelAS5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelAS5.Visible = false;
             // 
-            // labelA6
+            // labelAS6
             // 
-            this.labelA6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelA6.Location = new System.Drawing.Point(254, 311);
-            this.labelA6.Name = "labelA6";
-            this.labelA6.Size = new System.Drawing.Size(73, 19);
-            this.labelA6.TabIndex = 18;
-            this.labelA6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.labelA6.Visible = false;
-            this.labelA6.Click += new System.EventHandler(this.labelA6_Click);
+            this.labelAS6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelAS6.Location = new System.Drawing.Point(254, 311);
+            this.labelAS6.Name = "labelAS6";
+            this.labelAS6.Size = new System.Drawing.Size(73, 19);
+            this.labelAS6.TabIndex = 18;
+            this.labelAS6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelAS6.Visible = false;
             // 
-            // labelA7
+            // labelAS7
             // 
-            this.labelA7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelA7.Location = new System.Drawing.Point(254, 335);
-            this.labelA7.Name = "labelA7";
-            this.labelA7.Size = new System.Drawing.Size(73, 19);
-            this.labelA7.TabIndex = 19;
-            this.labelA7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.labelA7.Visible = false;
+            this.labelAS7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelAS7.Location = new System.Drawing.Point(254, 335);
+            this.labelAS7.Name = "labelAS7";
+            this.labelAS7.Size = new System.Drawing.Size(73, 19);
+            this.labelAS7.TabIndex = 19;
+            this.labelAS7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelAS7.Visible = false;
             // 
-            // labelA8
+            // labelAS8
             // 
-            this.labelA8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelA8.Location = new System.Drawing.Point(158, 522);
-            this.labelA8.Name = "labelA8";
-            this.labelA8.Size = new System.Drawing.Size(73, 19);
-            this.labelA8.TabIndex = 20;
-            this.labelA8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.labelA8.Visible = false;
+            this.labelAS8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelAS8.Location = new System.Drawing.Point(158, 522);
+            this.labelAS8.Name = "labelAS8";
+            this.labelAS8.Size = new System.Drawing.Size(73, 19);
+            this.labelAS8.TabIndex = 20;
+            this.labelAS8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelAS8.Visible = false;
             // 
-            // labelA9
+            // labelAS9
             // 
-            this.labelA9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelA9.Location = new System.Drawing.Point(260, 523);
-            this.labelA9.Name = "labelA9";
-            this.labelA9.Size = new System.Drawing.Size(33, 19);
-            this.labelA9.TabIndex = 21;
-            this.labelA9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.labelA9.Visible = false;
+            this.labelAS9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelAS9.Location = new System.Drawing.Point(260, 523);
+            this.labelAS9.Name = "labelAS9";
+            this.labelAS9.Size = new System.Drawing.Size(33, 19);
+            this.labelAS9.TabIndex = 21;
+            this.labelAS9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelAS9.Visible = false;
             // 
-            // labelA10
+            // labelAS10
             // 
-            this.labelA10.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelA10.Location = new System.Drawing.Point(83, 556);
-            this.labelA10.Name = "labelA10";
-            this.labelA10.Size = new System.Drawing.Size(47, 22);
-            this.labelA10.TabIndex = 22;
-            this.labelA10.Tag = "";
-            this.labelA10.Text = "123";
-            this.labelA10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.labelA10.Visible = false;
+            this.labelAS10.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelAS10.Location = new System.Drawing.Point(83, 556);
+            this.labelAS10.Name = "labelAS10";
+            this.labelAS10.Size = new System.Drawing.Size(47, 22);
+            this.labelAS10.TabIndex = 22;
+            this.labelAS10.Tag = "";
+            this.labelAS10.Text = "123";
+            this.labelAS10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelAS10.Visible = false;
             // 
             // genPolynomialBox
             // 
@@ -334,7 +331,6 @@
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Значения";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // groupBox2
             // 
@@ -362,7 +358,6 @@
             this.labelResult.Size = new System.Drawing.Size(0, 17);
             this.labelResult.TabIndex = 27;
             this.labelResult.Visible = false;
-            this.labelResult.Click += new System.EventHandler(this.labelResult_Click);
             // 
             // label4
             // 
@@ -373,7 +368,6 @@
             this.label4.Size = new System.Drawing.Size(159, 19);
             this.label4.TabIndex = 26;
             this.label4.Text = "Операция и результат:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // Form1
             // 
@@ -384,16 +378,16 @@
             this.ClientSize = new System.Drawing.Size(624, 650);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.labelA10);
-            this.Controls.Add(this.labelA9);
-            this.Controls.Add(this.labelA8);
-            this.Controls.Add(this.labelA7);
-            this.Controls.Add(this.labelA6);
-            this.Controls.Add(this.labelA5);
-            this.Controls.Add(this.labelA4);
-            this.Controls.Add(this.labelA3);
-            this.Controls.Add(this.labelA2);
-            this.Controls.Add(this.labelA1);
+            this.Controls.Add(this.labelAS10);
+            this.Controls.Add(this.labelAS9);
+            this.Controls.Add(this.labelAS8);
+            this.Controls.Add(this.labelAS7);
+            this.Controls.Add(this.labelAS6);
+            this.Controls.Add(this.labelAS5);
+            this.Controls.Add(this.labelAS4);
+            this.Controls.Add(this.labelAS3);
+            this.Controls.Add(this.labelAS2);
+            this.Controls.Add(this.labelAS1);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -422,16 +416,16 @@
         private System.Windows.Forms.Button buttonResult;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label labelA1;
-        private System.Windows.Forms.Label labelA2;
-        private System.Windows.Forms.Label labelA3;
-        private System.Windows.Forms.Label labelA4;
-        private System.Windows.Forms.Label labelA5;
-        private System.Windows.Forms.Label labelA6;
-        private System.Windows.Forms.Label labelA7;
-        private System.Windows.Forms.Label labelA8;
-        private System.Windows.Forms.Label labelA9;
-        private System.Windows.Forms.Label labelA10;
+        private System.Windows.Forms.Label labelAS1;
+        private System.Windows.Forms.Label labelAS2;
+        private System.Windows.Forms.Label labelAS3;
+        private System.Windows.Forms.Label labelAS4;
+        private System.Windows.Forms.Label labelAS5;
+        private System.Windows.Forms.Label labelAS6;
+        private System.Windows.Forms.Label labelAS7;
+        private System.Windows.Forms.Label labelAS8;
+        private System.Windows.Forms.Label labelAS9;
+        private System.Windows.Forms.Label labelAS10;
         private System.Windows.Forms.ComboBox genPolynomialBox;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;

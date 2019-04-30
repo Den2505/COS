@@ -238,16 +238,16 @@ namespace Galois_fields
         private void addLabelsToMas()
         {
             _addLabCheck = true;
-            _labelAddSubMas.Add(labelA1);
-            _labelAddSubMas.Add(labelA2);
-            _labelAddSubMas.Add(labelA3);
-            _labelAddSubMas.Add(labelA4);
-            _labelAddSubMas.Add(labelA5);
-            _labelAddSubMas.Add(labelA6);
-            _labelAddSubMas.Add(labelA7);
-            _labelAddSubMas.Add(labelA8);
-            _labelAddSubMas.Add(labelA9);
-            _labelAddSubMas.Add(labelA10);
+            _labelAddSubMas.Add(labelAS1);
+            _labelAddSubMas.Add(labelAS2);
+            _labelAddSubMas.Add(labelAS3);
+            _labelAddSubMas.Add(labelAS4);
+            _labelAddSubMas.Add(labelAS5);
+            _labelAddSubMas.Add(labelAS6);
+            _labelAddSubMas.Add(labelAS7);
+            _labelAddSubMas.Add(labelAS8);
+            _labelAddSubMas.Add(labelAS9);
+            _labelAddSubMas.Add(labelAS10);
         }
 
 
@@ -279,16 +279,16 @@ namespace Galois_fields
 
         private void operationAdditionAndSubstractionExpand()
         {
-            labelA1.Text = textBoxA.Text;
-            labelA2.Text = textBoxB.Text;
-            labelA3.Text = Convert.ToString(Convert.ToByte(labelA1.Text), 2).PadLeft(8, '0');
-            labelA4.Text = Convert.ToString(Convert.ToByte(labelA2.Text), 2).PadLeft(8, '0');
-            labelA5.Text = labelA3.Text;
-            labelA6.Text = labelA4.Text;
-            labelA7.Text = Convert.ToString(Convert.ToByte(labelResult.Text), 2).PadLeft(8, '0');
-            labelA8.Text = labelA7.Text;
-            labelA9.Text = labelResult.Text;
-            labelA10.Text = labelResult.Text;
+            labelAS1.Text = textBoxA.Text;
+            labelAS2.Text = textBoxB.Text;
+            labelAS3.Text = Convert.ToString(Convert.ToByte(labelAS1.Text), 2).PadLeft(8, '0');
+            labelAS4.Text = Convert.ToString(Convert.ToByte(labelAS2.Text), 2).PadLeft(8, '0');
+            labelAS5.Text = labelAS3.Text;
+            labelAS6.Text = labelAS4.Text;
+            labelAS7.Text = Convert.ToString(Convert.ToByte(labelResult.Text), 2).PadLeft(8, '0');
+            labelAS8.Text = labelAS7.Text;
+            labelAS9.Text = labelResult.Text;
+            labelAS10.Text = labelResult.Text;
         }
 
         private void genPolynomial_SelectedIndexChanged(object sender, EventArgs e)
@@ -345,38 +345,7 @@ namespace Galois_fields
                     break;
             }
         }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelA4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelA6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelResult_Click(object sender, EventArgs e)
         {
 
         }
