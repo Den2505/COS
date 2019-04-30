@@ -30,6 +30,7 @@ namespace Galois_fields
         private string _operationGF = "addition";
         private List<Label> _labelAddSubMas = new List<Label>();
         private bool _addLabCheck = false;
+        private byte resultOperation;
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -37,8 +38,8 @@ namespace Galois_fields
             byte b = Convert.ToByte(textBoxB.Text);
             if (_operationGF == "addition")
             {
-                label3.Text = "a + b = " + Convert.ToString(operationAdd(a, b));
-                labelResult.Text = Convert.ToString(operationAdd(a, b));
+                labelResult.Text = "a + b = " + Convert.ToString(operationAdd(a, b));
+                resultOperation = operationAdd(a, b);
 
                 //офф
                 enableVisibleAdditionAndSubstractionLables();
@@ -46,8 +47,8 @@ namespace Galois_fields
             }
             if (_operationGF == "subtraction")
             {
-                label3.Text = "a - b = " + Convert.ToString(operationSub(a, b));
-                labelResult.Text = Convert.ToString(operationSub(a, b));
+                labelResult.Text = "a - b = " + Convert.ToString(operationSub(a, b));
+                resultOperation = operationSub(a, b);
 
                 //офф
                 enableVisibleAdditionAndSubstractionLables();
@@ -55,20 +56,17 @@ namespace Galois_fields
             }
             if (_operationGF == "multiplication")
             {
-
                 genExpTable();
                 genLogTable();
-                labelResult.Text = Convert.ToString(operationMul(a, b));
-                label3.Text = "a * b = " + Convert.ToString(operationMul(a, b));
-                pictureBox1.Image = null;
+                labelResult.Text = "a * b = " + Convert.ToString(operationMul(a, b));
+                resultOperation = operationMul(a, b);
 
                 disableVisibleAdditionAndSubstractionLables();
                 //фон
             }
             if (_operationGF == "division")
             {
-                label3.Text = "a / b =";
-                labelResult.Text = null;
+                labelResult.Text = "a / b =";
                 pictureBox1.Image = null;
 
                 disableVisibleAdditionAndSubstractionLables();
@@ -153,7 +151,6 @@ namespace Galois_fields
             _operationGF = "addition";
             genPolynomialBox.Enabled = false;
 
-            label3.Text = null;
             labelResult.Text = null;
             clearAdditionAndSubstractionLables();
         }
@@ -164,20 +161,18 @@ namespace Galois_fields
             _operationGF = "subtraction";
             genPolynomialBox.Enabled = false;
 
-            label3.Text = null;
             labelResult.Text = null;
             clearAdditionAndSubstractionLables();
         }
 
         private void radioButtonMul_CheckedChanged(object sender, EventArgs e)
         {
-            pictureBox1.Image = null;
+            pictureBox1.Image = Properties.Resources.imgMul;
             _operationGF = "multiplication";
             genPolynomialBox.Enabled = true;
 
-            label3.Text = null;
             labelResult.Text = null;
-            clearAdditionAndSubstractionLables();
+            disableVisibleAdditionAndSubstractionLables();
         }
 
         private void radioButtonDiv_CheckedChanged(object sender, EventArgs e)
@@ -186,9 +181,8 @@ namespace Galois_fields
             _operationGF = "division";
             genPolynomialBox.Enabled = true;
 
-            label3.Text = null;
             labelResult.Text = null;
-            clearAdditionAndSubstractionLables();
+            disableVisibleAdditionAndSubstractionLables();
         }
 
         private void textBoxA_TextChanged(object sender, EventArgs e)
@@ -285,10 +279,10 @@ namespace Galois_fields
             labelAS4.Text = Convert.ToString(Convert.ToByte(labelAS2.Text), 2).PadLeft(8, '0');
             labelAS5.Text = labelAS3.Text;
             labelAS6.Text = labelAS4.Text;
-            labelAS7.Text = Convert.ToString(Convert.ToByte(labelResult.Text), 2).PadLeft(8, '0');
+            labelAS7.Text = Convert.ToString(resultOperation, 2).PadLeft(8, '0');
             labelAS8.Text = labelAS7.Text;
-            labelAS9.Text = labelResult.Text;
-            labelAS10.Text = labelResult.Text;
+            labelAS9.Text = Convert.ToString(resultOperation);
+            labelAS10.Text = Convert.ToString(resultOperation);
         }
 
         private void genPolynomial_SelectedIndexChanged(object sender, EventArgs e)

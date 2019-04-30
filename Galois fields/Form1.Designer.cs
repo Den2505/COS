@@ -38,7 +38,7 @@
             this.radioButtonMul = new System.Windows.Forms.RadioButton();
             this.radioButtonDiv = new System.Windows.Forms.RadioButton();
             this.buttonResult = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.labelResult = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelAS1 = new System.Windows.Forms.Label();
             this.labelAS2 = new System.Windows.Forms.Label();
@@ -53,7 +53,6 @@
             this.genPolynomialBox = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.labelResult = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -129,7 +128,7 @@
             // 
             this.radioButtonMul.AutoSize = true;
             this.radioButtonMul.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButtonMul.Location = new System.Drawing.Point(4, 77);
+            this.radioButtonMul.Location = new System.Drawing.Point(6, 77);
             this.radioButtonMul.Name = "radioButtonMul";
             this.radioButtonMul.Size = new System.Drawing.Size(58, 23);
             this.radioButtonMul.TabIndex = 6;
@@ -142,7 +141,7 @@
             // 
             this.radioButtonDiv.AutoSize = true;
             this.radioButtonDiv.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButtonDiv.Location = new System.Drawing.Point(4, 106);
+            this.radioButtonDiv.Location = new System.Drawing.Point(6, 106);
             this.radioButtonDiv.Name = "radioButtonDiv";
             this.radioButtonDiv.Size = new System.Drawing.Size(54, 23);
             this.radioButtonDiv.TabIndex = 7;
@@ -163,21 +162,21 @@
             this.buttonResult.UseVisualStyleBackColor = true;
             this.buttonResult.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label3
+            // labelResult
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(120, 79);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 22);
-            this.label3.TabIndex = 9;
-            this.label3.UseCompatibleTextRendering = true;
+            this.labelResult.AutoSize = true;
+            this.labelResult.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelResult.Location = new System.Drawing.Point(120, 79);
+            this.labelResult.Name = "labelResult";
+            this.labelResult.Size = new System.Drawing.Size(0, 22);
+            this.labelResult.TabIndex = 9;
+            this.labelResult.UseCompatibleTextRendering = true;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.Window;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Image = global::Galois_fields.Properties.Resources.imgAdd;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(12, 154);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(610, 484);
@@ -187,7 +186,7 @@
             // labelAS1
             // 
             this.labelAS1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelAS1.Location = new System.Drawing.Point(200, 201);
+            this.labelAS1.Location = new System.Drawing.Point(256, 201);
             this.labelAS1.Name = "labelAS1";
             this.labelAS1.Size = new System.Drawing.Size(33, 19);
             this.labelAS1.TabIndex = 13;
@@ -197,7 +196,7 @@
             // labelAS2
             // 
             this.labelAS2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelAS2.Location = new System.Drawing.Point(200, 226);
+            this.labelAS2.Location = new System.Drawing.Point(256, 226);
             this.labelAS2.Name = "labelAS2";
             this.labelAS2.Size = new System.Drawing.Size(33, 19);
             this.labelAS2.TabIndex = 14;
@@ -207,7 +206,7 @@
             // labelAS3
             // 
             this.labelAS3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelAS3.Location = new System.Drawing.Point(267, 199);
+            this.labelAS3.Location = new System.Drawing.Point(320, 201);
             this.labelAS3.Name = "labelAS3";
             this.labelAS3.Size = new System.Drawing.Size(73, 19);
             this.labelAS3.TabIndex = 15;
@@ -217,7 +216,7 @@
             // labelAS4
             // 
             this.labelAS4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelAS4.Location = new System.Drawing.Point(267, 226);
+            this.labelAS4.Location = new System.Drawing.Point(320, 226);
             this.labelAS4.Name = "labelAS4";
             this.labelAS4.Size = new System.Drawing.Size(73, 19);
             this.labelAS4.TabIndex = 16;
@@ -227,7 +226,7 @@
             // labelAS5
             // 
             this.labelAS5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelAS5.Location = new System.Drawing.Point(254, 287);
+            this.labelAS5.Location = new System.Drawing.Point(307, 287);
             this.labelAS5.Name = "labelAS5";
             this.labelAS5.Size = new System.Drawing.Size(73, 19);
             this.labelAS5.TabIndex = 17;
@@ -237,7 +236,7 @@
             // labelAS6
             // 
             this.labelAS6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelAS6.Location = new System.Drawing.Point(254, 311);
+            this.labelAS6.Location = new System.Drawing.Point(307, 311);
             this.labelAS6.Name = "labelAS6";
             this.labelAS6.Size = new System.Drawing.Size(73, 19);
             this.labelAS6.TabIndex = 18;
@@ -247,7 +246,7 @@
             // labelAS7
             // 
             this.labelAS7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelAS7.Location = new System.Drawing.Point(254, 335);
+            this.labelAS7.Location = new System.Drawing.Point(307, 335);
             this.labelAS7.Name = "labelAS7";
             this.labelAS7.Size = new System.Drawing.Size(73, 19);
             this.labelAS7.TabIndex = 19;
@@ -257,7 +256,7 @@
             // labelAS8
             // 
             this.labelAS8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelAS8.Location = new System.Drawing.Point(158, 522);
+            this.labelAS8.Location = new System.Drawing.Point(211, 524);
             this.labelAS8.Name = "labelAS8";
             this.labelAS8.Size = new System.Drawing.Size(73, 19);
             this.labelAS8.TabIndex = 20;
@@ -267,7 +266,7 @@
             // labelAS9
             // 
             this.labelAS9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelAS9.Location = new System.Drawing.Point(260, 523);
+            this.labelAS9.Location = new System.Drawing.Point(313, 524);
             this.labelAS9.Name = "labelAS9";
             this.labelAS9.Size = new System.Drawing.Size(33, 19);
             this.labelAS9.TabIndex = 21;
@@ -282,7 +281,6 @@
             this.labelAS10.Size = new System.Drawing.Size(47, 22);
             this.labelAS10.TabIndex = 22;
             this.labelAS10.Tag = "";
-            this.labelAS10.Text = "123";
             this.labelAS10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.labelAS10.Visible = false;
             // 
@@ -334,14 +332,13 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.labelResult);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.radioButtonMul);
             this.groupBox2.Controls.Add(this.radioButtonDiv);
             this.groupBox2.Controls.Add(this.genPolynomialBox);
             this.groupBox2.Controls.Add(this.radioButtonApp);
             this.groupBox2.Controls.Add(this.radioButtonSub);
-            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.labelResult);
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox2.Location = new System.Drawing.Point(284, 12);
             this.groupBox2.Name = "groupBox2";
@@ -349,15 +346,6 @@
             this.groupBox2.TabIndex = 25;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Операции и порождающий полином";
-            // 
-            // labelResult
-            // 
-            this.labelResult.AutoSize = true;
-            this.labelResult.Location = new System.Drawing.Point(307, 77);
-            this.labelResult.Name = "labelResult";
-            this.labelResult.Size = new System.Drawing.Size(0, 17);
-            this.labelResult.TabIndex = 27;
-            this.labelResult.Visible = false;
             // 
             // label4
             // 
@@ -414,7 +402,7 @@
         private System.Windows.Forms.RadioButton radioButtonMul;
         private System.Windows.Forms.RadioButton radioButtonDiv;
         private System.Windows.Forms.Button buttonResult;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelResult;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label labelAS1;
         private System.Windows.Forms.Label labelAS2;
@@ -430,7 +418,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label labelResult;
     }
 }
 
