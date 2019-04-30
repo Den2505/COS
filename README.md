@@ -10,7 +10,7 @@ Galois field
 ![alt text](https://github.com/Den2505/COS/blob/master/imgSub.png)
 
 Описание произведения   
-*
+![alt text](https://github.com/Den2505/COS/blob/master/imgMul.png)
 
 Описание частного   
 *
