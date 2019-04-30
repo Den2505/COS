@@ -23,6 +23,7 @@ namespace Galois_fields
             if (!_addLabCheck)
             {
                 addLabelsToMas();
+                genPolynomialBox.SelectedIndex = 0;
             }
         }
 
@@ -38,24 +39,19 @@ namespace Galois_fields
             {
                 label3.Text = "a + b = " + Convert.ToString(operationAdd(a, b));
                 labelResult.Text = Convert.ToString(operationAdd(a, b));
-                //  pictureBox1.Image = Properties.Resources.imgAdd;
 
-                //  disableVisibleSubtractionLables();
                 //офф
                 enableVisibleAdditionAndSubstractionLables();
-                operationAdditionExpand();
+                operationAdditionAndSubstractionExpand();
             }
             if (_operationGF == "subtraction")
             {
                 label3.Text = "a - b = " + Convert.ToString(operationSub(a, b));
                 labelResult.Text = Convert.ToString(operationSub(a, b));
-                //  pictureBox1.Image = Properties.Resources.imgSub;
 
-                enableVisibleAdditionAndSubstractionLables();
-                //  disableVisibleAdditionLables();
                 //офф
-                //  enableVisibleSubtractionLables();
-                operationSubtractionExpand();
+                enableVisibleAdditionAndSubstractionLables();
+                operationAdditionAndSubstractionExpand();
             }
             if (_operationGF == "multiplication")
             {
@@ -67,7 +63,6 @@ namespace Galois_fields
                 pictureBox1.Image = null;
 
                 disableVisibleAdditionAndSubstractionLables();
-                //   disableVisibleSubtractionLables();
                 //фон
             }
             if (_operationGF == "division")
@@ -77,7 +72,6 @@ namespace Galois_fields
                 pictureBox1.Image = null;
 
                 disableVisibleAdditionAndSubstractionLables();
-                //  disableVisibleSubtractionLables();
                 //фон
             }
         }
@@ -256,6 +250,7 @@ namespace Galois_fields
             _labelAddSubMas.Add(labelA10);
         }
 
+
         //
         private void enableVisibleAdditionAndSubstractionLables()
         {
@@ -263,17 +258,6 @@ namespace Galois_fields
             {
                 iLabel.Visible = true;
             }
-
-            //labelA1.Visible = true;
-            //labelA2.Visible = true;
-            //labelA3.Visible = true;
-            //labelA4.Visible = true;
-            //labelA5.Visible = true;
-            //labelA6.Visible = true;
-            //labelA7.Visible = true;
-            //labelA8.Visible = true;
-            //labelA9.Visible = true;
-            //labelA10.Visible = true;
             //
         }
         private void disableVisibleAdditionAndSubstractionLables()
@@ -282,17 +266,6 @@ namespace Galois_fields
             {
                 iLabel.Visible = false;
             }
-
-            //labelA1.Visible = false;
-            //labelA2.Visible = false;
-            //labelA3.Visible = false;
-            //labelA4.Visible = false;
-            //labelA5.Visible = false;
-            //labelA6.Visible = false;
-            //labelA7.Visible = false;
-            //labelA8.Visible = false;
-            //labelA9.Visible = false;
-            //labelA10.Visible = false;
             //
         }
 
@@ -304,50 +277,7 @@ namespace Galois_fields
             }
         }
 
-        //private void enableVisibleSubtractionLables()
-        //{
-        //    labelS1.Visible = true;
-        //    labelS2.Visible = true;
-        //    labelS3.Visible = true;
-        //    labelS4.Visible = true;
-        //    labelS5.Visible = true;
-        //    labelS6.Visible = true;
-        //    labelS7.Visible = true;
-        //    labelS8.Visible = true;
-        //    labelS9.Visible = true;
-        //    labelS10.Visible = true;
-        //    //
-        //}
-        //private void disableVisibleSubtractionLables()
-        //{
-        //    labelS1.Visible = false;
-        //    labelS2.Visible = false;
-        //    labelS3.Visible = false;
-        //    labelS4.Visible = false;
-        //    labelS5.Visible = false;
-        //    labelS6.Visible = false;
-        //    labelS7.Visible = false;
-        //    labelS8.Visible = false;
-        //    labelS9.Visible = false;
-        //    labelS10.Visible = false;
-        //    //
-        //}
-
-        private void operationAdditionExpand()
-        {
-            labelA1.Text = textBoxA.Text;
-            labelA2.Text = textBoxB.Text;
-            labelA3.Text = Convert.ToString(Convert.ToByte(labelA1.Text), 2).PadLeft(8, '0');
-            labelA4.Text = Convert.ToString(Convert.ToByte(labelA2.Text), 2).PadLeft(8, '0');
-            labelA5.Text = labelA3.Text;
-            labelA6.Text = labelA4.Text;
-            labelA7.Text = Convert.ToString(Convert.ToByte(labelResult.Text), 2).PadLeft(8, '0');
-            labelA8.Text = labelA7.Text;
-            labelA9.Text = labelResult.Text;
-            labelA10.Text = labelResult.Text;
-        }
-
-        private void operationSubtractionExpand()
+        private void operationAdditionAndSubstractionExpand()
         {
             labelA1.Text = textBoxA.Text;
             labelA2.Text = textBoxB.Text;
@@ -417,11 +347,6 @@ namespace Galois_fields
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelS1_Click(object sender, EventArgs e)
         {
 
         }

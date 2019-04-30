@@ -129,7 +129,7 @@
             // 
             this.radioButtonMul.AutoSize = true;
             this.radioButtonMul.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButtonMul.Location = new System.Drawing.Point(6, 106);
+            this.radioButtonMul.Location = new System.Drawing.Point(4, 77);
             this.radioButtonMul.Name = "radioButtonMul";
             this.radioButtonMul.Size = new System.Drawing.Size(58, 23);
             this.radioButtonMul.TabIndex = 6;
@@ -142,7 +142,7 @@
             // 
             this.radioButtonDiv.AutoSize = true;
             this.radioButtonDiv.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButtonDiv.Location = new System.Drawing.Point(6, 77);
+            this.radioButtonDiv.Location = new System.Drawing.Point(4, 106);
             this.radioButtonDiv.Name = "radioButtonDiv";
             this.radioButtonDiv.Size = new System.Drawing.Size(54, 23);
             this.radioButtonDiv.TabIndex = 7;
@@ -333,7 +333,7 @@
             this.groupBox1.Size = new System.Drawing.Size(266, 136);
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Введите значения:";
+            this.groupBox1.Text = "Значения";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // groupBox2
@@ -352,7 +352,7 @@
             this.groupBox2.Size = new System.Drawing.Size(338, 136);
             this.groupBox2.TabIndex = 25;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Выберите операцию и полином:";
+            this.groupBox2.Text = "Операции и порождающий полином";
             // 
             // labelResult
             // 
