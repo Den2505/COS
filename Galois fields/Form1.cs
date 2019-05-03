@@ -22,13 +22,15 @@ namespace Galois_fields
             base.OnPaint(e);
             if (!_addLabCheck)
             {
-                addLabelsToMas();
+                addLabelsToMasAS();
+                addLabelsToMasM();
                 genPolynomialBox.SelectedIndex = 0;
             }
         }
 
         private string _operationGF = "addition";
         private List<Label> _labelAddSubMas = new List<Label>();
+        private List<Label> _labelMulMas = new List<Label>();
         private bool _addLabCheck = false;
         private byte resultOperation;
 
@@ -61,16 +63,18 @@ namespace Galois_fields
                 labelResult.Text = "a * b = " + Convert.ToString(operationMul(a, b));
                 resultOperation = operationMul(a, b);
 
-                disableVisibleAdditionAndSubstractionLables();
-                //фон
+                //офф
+                enableVisibleMultiplicationLables();
+                operationMultiplicationExpand();
+
             }
             if (_operationGF == "division")
             {
                 labelResult.Text = "a / b =";
                 pictureBox1.Image = null;
 
-                disableVisibleAdditionAndSubstractionLables();
-                //фон
+                //офф
+
             }
         }
 
@@ -153,6 +157,7 @@ namespace Galois_fields
 
             labelResult.Text = null;
             clearAdditionAndSubstractionLables();
+            disableVisibleMultiplicationLables();
         }
 
         private void radioButtonSub_CheckedChanged(object sender, EventArgs e)
@@ -163,6 +168,7 @@ namespace Galois_fields
 
             labelResult.Text = null;
             clearAdditionAndSubstractionLables();
+            disableVisibleMultiplicationLables();
         }
 
         private void radioButtonMul_CheckedChanged(object sender, EventArgs e)
@@ -183,6 +189,7 @@ namespace Galois_fields
 
             labelResult.Text = null;
             disableVisibleAdditionAndSubstractionLables();
+            disableVisibleMultiplicationLables();
         }
 
         private void textBoxA_TextChanged(object sender, EventArgs e)
@@ -229,7 +236,7 @@ namespace Galois_fields
         }
 
 
-        private void addLabelsToMas()
+        private void addLabelsToMasAS()
         {
             _addLabCheck = true;
             _labelAddSubMas.Add(labelAS1);
@@ -244,6 +251,14 @@ namespace Galois_fields
             _labelAddSubMas.Add(labelAS10);
         }
 
+        private void addLabelsToMasM()
+        {
+            _addLabCheck = true;
+            _labelMulMas.Add(labelM1);
+            _labelMulMas.Add(labelM2);
+            _labelMulMas.Add(labelM3);
+        }
+
 
         //
         private void enableVisibleAdditionAndSubstractionLables()
@@ -252,7 +267,6 @@ namespace Galois_fields
             {
                 iLabel.Visible = true;
             }
-            //
         }
         private void disableVisibleAdditionAndSubstractionLables()
         {
@@ -260,9 +274,7 @@ namespace Galois_fields
             {
                 iLabel.Visible = false;
             }
-            //
         }
-
         private void clearAdditionAndSubstractionLables()
         {
             foreach (Label iLabel in _labelAddSubMas)
@@ -270,6 +282,23 @@ namespace Galois_fields
                 iLabel.Text = null;
             }
         }
+        //
+        //
+        private void enableVisibleMultiplicationLables()
+        {
+            foreach (Label iLabel in _labelMulMas)
+            {
+                iLabel.Visible = true;
+            }
+        }
+        private void disableVisibleMultiplicationLables()
+        {
+            foreach (Label iLabel in _labelMulMas)
+            {
+                iLabel.Visible = false;
+            }
+        }
+        //
 
         private void operationAdditionAndSubstractionExpand()
         {
@@ -284,6 +313,31 @@ namespace Galois_fields
             labelAS9.Text = Convert.ToString(resultOperation);
             labelAS10.Text = Convert.ToString(resultOperation);
         }
+
+        ///!!!
+        private void operationMultiplicationExpand()
+        {
+            labelM1.Text = textBoxA.Text + " = " + toPolynomial(Convert.ToInt16(textBoxA.Text));
+            labelM2.Text = textBoxB.Text + " = " + toPolynomial(Convert.ToInt16(textBoxB.Text));
+            labelM3.Text = "";
+        }
+
+        private static string toPolynomial(int a)
+        {
+            string resPol = "";
+            string temp = Convert.ToString(a, 2);
+            for (int i = 0; i < temp.Length; i++)
+            {
+                if (temp[i] == '1')
+                {
+                    resPol += "x^" + Convert.ToString(temp.Length - 1 - i) + "+";
+                }
+            }
+            resPol = resPol.Remove(resPol.Length - 1);
+            resPol = resPol.Replace("x^0", "1");
+            return resPol;
+        }
+        ///!!!
 
         private void genPolynomial_SelectedIndexChanged(object sender, EventArgs e)
         {

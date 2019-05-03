@@ -54,6 +54,9 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.labelM1 = new System.Windows.Forms.Label();
+            this.labelM2 = new System.Windows.Forms.Label();
+            this.labelM3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -176,7 +179,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.Window;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::Galois_fields.Properties.Resources.imgAdd;
             this.pictureBox1.Location = new System.Drawing.Point(12, 154);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(610, 484);
@@ -357,6 +360,33 @@
             this.label4.TabIndex = 26;
             this.label4.Text = "Операция и результат:";
             // 
+            // labelM1
+            // 
+            this.labelM1.AutoSize = true;
+            this.labelM1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelM1.Location = new System.Drawing.Point(221, 201);
+            this.labelM1.Name = "labelM1";
+            this.labelM1.Size = new System.Drawing.Size(0, 19);
+            this.labelM1.TabIndex = 26;
+            // 
+            // labelM2
+            // 
+            this.labelM2.AutoSize = true;
+            this.labelM2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelM2.Location = new System.Drawing.Point(221, 226);
+            this.labelM2.Name = "labelM2";
+            this.labelM2.Size = new System.Drawing.Size(0, 19);
+            this.labelM2.TabIndex = 27;
+            // 
+            // labelM3
+            // 
+            this.labelM3.AutoSize = true;
+            this.labelM3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelM3.Location = new System.Drawing.Point(136, 287);
+            this.labelM3.Name = "labelM3";
+            this.labelM3.Size = new System.Drawing.Size(0, 19);
+            this.labelM3.TabIndex = 28;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -364,6 +394,9 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(624, 650);
+            this.Controls.Add(this.labelM3);
+            this.Controls.Add(this.labelM2);
+            this.Controls.Add(this.labelM1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.labelAS10);
@@ -388,6 +421,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -418,6 +452,9 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelM1;
+        private System.Windows.Forms.Label labelM2;
+        private System.Windows.Forms.Label labelM3;
     }
 }
 
