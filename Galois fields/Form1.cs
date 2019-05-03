@@ -70,8 +70,9 @@ namespace Galois_fields
             }
             if (_operationGF == "division")
             {
-                labelResult.Text = "a / b =";
-                pictureBox1.Image = null;
+                genExpTable();
+                genLogTable();
+                labelResult.Text = "a / b = " + Convert.ToString(operationDiv(a, b));
 
                 //офф
 
@@ -148,6 +149,16 @@ namespace Galois_fields
             //MUL
         }
 
+        private static byte operationDiv(byte a, byte b)
+        {
+            byte resDiv = 0;
+            if (b != 0)
+            {
+                byte temp = (byte)((255 + _logarithmsT[a] - _logarithmsT[b]) % 255);
+                resDiv = _exponentialsT[temp];
+            }
+            return resDiv;
+        }
 
         private void radioButtonApp_CheckedChanged(object sender, EventArgs e)
         {
