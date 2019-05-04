@@ -380,12 +380,13 @@
             // 
             // labelM3
             // 
-            this.labelM3.AutoSize = true;
             this.labelM3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelM3.Location = new System.Drawing.Point(136, 287);
+            this.labelM3.Location = new System.Drawing.Point(12, 287);
             this.labelM3.Name = "labelM3";
-            this.labelM3.Size = new System.Drawing.Size(0, 19);
+            this.labelM3.Size = new System.Drawing.Size(610, 19);
             this.labelM3.TabIndex = 28;
+            this.labelM3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelM3.Visible = false;
             // 
             // Form1
             // 

@@ -158,6 +158,7 @@ namespace Galois_fields
                 resDiv = _exponentialsT[temp];
             }
             return resDiv;
+            //DIV
         }
 
         private void radioButtonApp_CheckedChanged(object sender, EventArgs e)
@@ -328,25 +329,19 @@ namespace Galois_fields
         ///!!!
         private void operationMultiplicationExpand()
         {
-            labelM1.Text = textBoxA.Text + " = " + toPolynomial(Convert.ToInt16(textBoxA.Text));
-            labelM2.Text = textBoxB.Text + " = " + toPolynomial(Convert.ToInt16(textBoxB.Text));
-            labelM3.Text = "";
+            labelM1.Text = textBoxA.Text + " = " + Convert.ToString(integerToPolynomial(Convert.ToByte(textBoxA.Text)));
+            labelM2.Text = textBoxB.Text + " = " + Convert.ToString(integerToPolynomial(Convert.ToByte(textBoxB.Text)));
+            labelM3.Text = Convert.ToString(integerToPolynomial(Convert.ToByte(textBoxA.Text)) * integerToPolynomial(Convert.ToByte(textBoxB.Text)));
         }
-
-        private static string toPolynomial(int a)
+        private static Polynomial integerToPolynomial(int a)
         {
-            string resPol = "";
-            string temp = Convert.ToString(a, 2);
-            for (int i = 0; i < temp.Length; i++)
+            string strTemp = Convert.ToString(a, 2);
+            var resPol = new double[strTemp.Length];
+            for (int i = 0; i < strTemp.Length; i++)
             {
-                if (temp[i] == '1')
-                {
-                    resPol += "x^" + Convert.ToString(temp.Length - 1 - i) + "+";
-                }
+                resPol[i] = Convert.ToByte(strTemp[i] - '0');
             }
-            resPol = resPol.Remove(resPol.Length - 1);
-            resPol = resPol.Replace("x^0", "1");
-            return resPol;
+            return new Polynomial(resPol);
         }
         ///!!!
 
@@ -407,6 +402,118 @@ namespace Galois_fields
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        internal class Polynomial
+        {
+            private readonly double[] _coefficients;
+
+            public Polynomial(params double[] coefficients)
+            {
+                _coefficients = coefficients;
+            }
+
+            public double this[int n]
+            {
+                get { return _coefficients[n]; }
+                set { _coefficients[n] = value; }
+            }
+
+            public int Order
+            {
+                get { return _coefficients.Length; }
+            }
+
+            public override string ToString()
+            {
+                string resPol = "";
+                for (int i = 0; i < _coefficients.Length; i++)
+                {
+                    if (_coefficients[i] == 1)
+                    {
+                        resPol += "x^" + Convert.ToString(_coefficients.Length - 1 - i) + "+";
+                    }
+                    if ((_coefficients[i] != 1) & (_coefficients[i] != 0) & (_coefficients[i] > 0))
+                    {
+                        resPol += _coefficients[i] + "x^" + Convert.ToString(_coefficients.Length - 1 - i) + "+";
+                    }
+                    if ((_coefficients[i] != 1) & (_coefficients[i] != 0) & (_coefficients[i] < 0))
+                    {
+                        resPol += "(" + _coefficients[i] + ")x^" + Convert.ToString(_coefficients.Length - 1 - i) + "+";
+                    }
+                }
+                    resPol = resPol.Remove(resPol.Length - 1);
+                    resPol = resPol.Replace("x^0", "1");
+                    return resPol;
+            }
+
+            public double Calculate(double x)
+            {
+                int n = _coefficients.Length - 1;
+                double result = _coefficients[n];
+                for (int i = n - 1; i >= 0; i--)
+                {
+                    result = x * result + _coefficients[i];
+                }
+                return result;
+            }
+
+            public static Polynomial operator +(Polynomial pFirst, Polynomial pSecond)
+            {
+                int itemsCount = Math.Max(pFirst._coefficients.Length, pSecond._coefficients.Length);
+                var result = new double[itemsCount];
+                for (int i = 0; i < itemsCount; i++)
+                {
+                    double a = 0;
+                    double b = 0;
+                    if (i < pFirst._coefficients.Length)
+                    {
+                        a = pFirst[i];
+                    }
+                    if (i < pSecond._coefficients.Length)
+                    {
+                        b = pSecond[i];
+                    }
+                    result[i] = a + b;
+                }
+                return new Polynomial(result);
+            }
+
+            public static Polynomial operator -(Polynomial pFirst, Polynomial pSecond)
+            {
+                int itemsCount = Math.Max(pFirst._coefficients.Length, pSecond._coefficients.Length);
+                var result = new double[itemsCount];
+                for (int i = 0; i < itemsCount; i++)
+                {
+                    double a = 0;
+                    double b = 0;
+                    if (i < pFirst._coefficients.Length)
+                    {
+                        a = pFirst[i];
+                    }
+                    if (i < pSecond._coefficients.Length)
+                    {
+                        b = pSecond[i];
+                    }
+                    result[i] = a - b;
+                }
+                return new Polynomial(result);
+            }
+
+            public static Polynomial operator *(Polynomial pFirst, Polynomial pSecond)
+            {
+                int itemsCount = pFirst._coefficients.Length + pSecond._coefficients.Length - 1;
+                var result = new double[itemsCount];
+                for (int i = 0; i < pFirst._coefficients.Length; i++)
+                {
+                    for (int j = 0; j < pSecond._coefficients.Length; j++)
+                    {
+                        result[i + j] += pFirst[i] * pSecond[j];
+                    }
+                }
+
+                return new Polynomial(result);
+            }
         }
     }
 }
