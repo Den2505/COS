@@ -444,12 +444,6 @@ namespace Galois_fields
                     {
                         resPol += _coefficients[i] + "x^" + Convert.ToString(_coefficients.Length - 1 - i) + "+";
                     }
-                    //// СЛЕД. КОНСТРУКЦИЯ НЕ ИСПОЛЬЗУЕТСЯ Т.К. У НАС ВЕЗДЕ ЗНАК "+" стоит!!!
-                    //if ((_coefficients[i] != 1) & (_coefficients[i] != 0) & (_coefficients[i] < 0))
-                    //{
-                    //    resPol += "(" + _coefficients[i] + ")x^" + Convert.ToString(_coefficients.Length - 1 - i) + "+";
-                    //}
-                    ////
                 }
                 resPol = resPol.Remove(resPol.Length - 1);
                 resPol = resPol.Replace("x^0", "1");
