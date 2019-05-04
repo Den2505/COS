@@ -445,9 +445,9 @@ namespace Galois_fields
                         resPol += _coefficients[i] + "x^" + Convert.ToString(_coefficients.Length - 1 - i) + "+";
                     }
                 }
+                resPol = resPol.Replace("x^1+", "x+");
+                resPol = resPol.Replace("x^0+", "1+");
                 resPol = resPol.Remove(resPol.Length - 1);
-                resPol = resPol.Replace("x^0", "1");
-                // resPol = resPol.Replace("x^1", "x");
                 return resPol;
             }
 
