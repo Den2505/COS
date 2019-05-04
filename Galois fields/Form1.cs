@@ -58,14 +58,23 @@ namespace Galois_fields
             }
             if (_operationGF == "multiplication")
             {
-                genExpTable();
-                genLogTable();
-                labelResult.Text = "a * b = " + Convert.ToString(operationMul(a, b));
-                _resultOperation = operationMul(a, b);
 
-                //офф
-                enableVisibleMultiplicationLables();
-                operationMultiplicationExpand();
+                if (textBoxA.Text == "0" || textBoxB.Text == "0")
+                {
+                    MessageBox.Show("Операция не имеет смысла! Одна из переменных содержит нулевое значение!", "Внимание!",
+                       MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    genExpTable();
+                    genLogTable();
+                    labelResult.Text = "a * b = " + Convert.ToString(operationMul(a, b));
+                    _resultOperation = operationMul(a, b);
+
+                    //офф
+                    enableVisibleMultiplicationLables();
+                    operationMultiplicationExpand();
+                }
 
             }
             if (_operationGF == "division")
@@ -75,7 +84,6 @@ namespace Galois_fields
                 labelResult.Text = "a / b = " + Convert.ToString(operationDiv(a, b));
 
                 //офф
-
             }
         }
 
@@ -270,6 +278,11 @@ namespace Galois_fields
             _labelMulMas.Add(labelM2);
             _labelMulMas.Add(labelM3);
             _labelMulMas.Add(labelM4);
+            _labelMulMas.Add(labelM5);
+            _labelMulMas.Add(labelM6);
+            _labelMulMas.Add(labelM7);
+            _labelMulMas.Add(labelM8);
+            _labelMulMas.Add(labelM9);
         }
 
 
@@ -295,6 +308,15 @@ namespace Galois_fields
                 iLabel.Text = null;
             }
         }
+
+        private void clearMultiplicationLables()
+        {
+            foreach (Label iLabel in _labelMulMas)
+            {
+                iLabel.Text = null;
+            }
+        }
+
         //
         //
         private void enableVisibleMultiplicationLables()
@@ -334,6 +356,12 @@ namespace Galois_fields
             labelM2.Text = textBoxB.Text + " = " + Convert.ToString(integerToPolynomial(Convert.ToByte(textBoxB.Text)));
             labelM3.Text = Convert.ToString(integerToPolynomial(Convert.ToByte(textBoxA.Text)) * integerToPolynomial(Convert.ToByte(textBoxB.Text)));
             labelM4.Text = Convert.ToString((new Polynomial()).polynomialReductionFunction(integerToPolynomial(Convert.ToByte(textBoxA.Text)) * integerToPolynomial(Convert.ToByte(textBoxB.Text))));
+            labelM5.Text = labelM4.Text;
+            labelM6.Text = genPolynomialBox.Text;
+            labelM7.Text = Convert.ToString(integerToPolynomial(Convert.ToByte(_resultOperation)));
+            labelM8.Text = Convert.ToString(_resultOperation) + " = " + Convert.ToString(_resultOperation, 2).PadLeft(8, '0');
+            labelM9.Text = Convert.ToString(integerToPolynomial(Convert.ToByte(_resultOperation))) +" = "+Convert.ToString(_resultOperation);
+
         }
 
         private static Polynomial integerToPolynomial(int a)
@@ -357,7 +385,7 @@ namespace Galois_fields
                 case "x^8+x^4+x^3+x^2+1":
                     _genPolynomial = 0x11D;
                     break;
-                case "x^8+x^5+x^3+x+1":
+                case "x^8+x^5+x^3+x^1+1":
                     _genPolynomial = 0x12B;
                     break;
                 case "x^8+x^5+x^3+x^2+1":
@@ -366,10 +394,10 @@ namespace Galois_fields
                 case "x^8+x^6+x^3+x^2+1":
                     _genPolynomial = 0x14D;
                     break;
-                case "x^8+x^6+x^4+x^3+x^2+x+1":
+                case "x^8+x^6+x^4+x^3+x^2+x^1+1":
                     _genPolynomial = 0x15F;
                     break;
-                case "x^8+x^6+x^5+x+1":
+                case "x^8+x^6+x^5+x^1+1":
                     _genPolynomial = 0x163;
                     break;
                 case "x^8+x^6+x^5+x^2+1":
@@ -381,7 +409,7 @@ namespace Galois_fields
                 case "x^8+x^6+x^5+x^4+1":
                     _genPolynomial = 0x171;
                     break;
-                case "x^8+x^7+x^2+x+1":
+                case "x^8+x^7+x^2+x^1+1":
                     _genPolynomial = 0x187;
                     break;
                 case "x^8+x^7+x^3+x^2+1":
@@ -390,13 +418,13 @@ namespace Galois_fields
                 case "x^8+x^7+x^5+x^3+1":
                     _genPolynomial = 0x1A9;
                     break;
-                case "x^8+x^7+x^6+x+1":
+                case "x^8+x^7+x^6+x^1+1":
                     _genPolynomial = 0x1C3;
                     break;
-                case "x^8+x^7+x^6+x^3+x^2+x+1":
+                case "x^8+x^7+x^6+x^3+x^2+x^1+1":
                     _genPolynomial = 0x1CF;
                     break;
-                case "x^8+x^7+x^6+x^5+x^2+x+1":
+                case "x^8+x^7+x^6+x^5+x^2+x^1+1":
                     _genPolynomial = 0x1E7;
                     break;
                 case "x^8+x^7+x^6+x^5+x^4+x^2+1":
