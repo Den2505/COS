@@ -57,6 +57,7 @@
             this.labelM1 = new System.Windows.Forms.Label();
             this.labelM2 = new System.Windows.Forms.Label();
             this.labelM3 = new System.Windows.Forms.Label();
+            this.labelM4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -179,7 +180,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.Window;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Image = global::Galois_fields.Properties.Resources.imgAdd;
+            this.pictureBox1.Image = global::Galois_fields.Properties.Resources.imgMul;
             this.pictureBox1.Location = new System.Drawing.Point(12, 154);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(610, 484);
@@ -388,6 +389,16 @@
             this.labelM3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelM3.Visible = false;
             // 
+            // labelM4
+            //             
+            this.labelM4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelM4.Location = new System.Drawing.Point(12, 349);
+            this.labelM4.Name = "labelM4";
+            this.labelM4.Size = new System.Drawing.Size(610, 19);
+            this.labelM4.TabIndex = 29;
+            this.labelM4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelM4.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -395,6 +406,7 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(624, 650);
+            this.Controls.Add(this.labelM4);
             this.Controls.Add(this.labelM3);
             this.Controls.Add(this.labelM2);
             this.Controls.Add(this.labelM1);
@@ -456,6 +468,7 @@
         private System.Windows.Forms.Label labelM1;
         private System.Windows.Forms.Label labelM2;
         private System.Windows.Forms.Label labelM3;
+        private System.Windows.Forms.Label labelM4;
     }
 }
 

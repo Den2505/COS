@@ -32,7 +32,7 @@ namespace Galois_fields
         private List<Label> _labelAddSubMas = new List<Label>();
         private List<Label> _labelMulMas = new List<Label>();
         private bool _addLabCheck = false;
-        private byte resultOperation;
+        private byte _resultOperation;
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -41,7 +41,7 @@ namespace Galois_fields
             if (_operationGF == "addition")
             {
                 labelResult.Text = "a + b = " + Convert.ToString(operationAdd(a, b));
-                resultOperation = operationAdd(a, b);
+                _resultOperation = operationAdd(a, b);
 
                 //офф
                 enableVisibleAdditionAndSubstractionLables();
@@ -50,7 +50,7 @@ namespace Galois_fields
             if (_operationGF == "subtraction")
             {
                 labelResult.Text = "a - b = " + Convert.ToString(operationSub(a, b));
-                resultOperation = operationSub(a, b);
+                _resultOperation = operationSub(a, b);
 
                 //офф
                 enableVisibleAdditionAndSubstractionLables();
@@ -61,7 +61,7 @@ namespace Galois_fields
                 genExpTable();
                 genLogTable();
                 labelResult.Text = "a * b = " + Convert.ToString(operationMul(a, b));
-                resultOperation = operationMul(a, b);
+                _resultOperation = operationMul(a, b);
 
                 //офф
                 enableVisibleMultiplicationLables();
@@ -269,6 +269,7 @@ namespace Galois_fields
             _labelMulMas.Add(labelM1);
             _labelMulMas.Add(labelM2);
             _labelMulMas.Add(labelM3);
+            _labelMulMas.Add(labelM4);
         }
 
 
@@ -320,10 +321,10 @@ namespace Galois_fields
             labelAS4.Text = Convert.ToString(Convert.ToByte(labelAS2.Text), 2).PadLeft(8, '0');
             labelAS5.Text = labelAS3.Text;
             labelAS6.Text = labelAS4.Text;
-            labelAS7.Text = Convert.ToString(resultOperation, 2).PadLeft(8, '0');
+            labelAS7.Text = Convert.ToString(_resultOperation, 2).PadLeft(8, '0');
             labelAS8.Text = labelAS7.Text;
-            labelAS9.Text = Convert.ToString(resultOperation);
-            labelAS10.Text = Convert.ToString(resultOperation);
+            labelAS9.Text = Convert.ToString(_resultOperation);
+            labelAS10.Text = Convert.ToString(_resultOperation);
         }
 
         ///!!!
@@ -332,7 +333,9 @@ namespace Galois_fields
             labelM1.Text = textBoxA.Text + " = " + Convert.ToString(integerToPolynomial(Convert.ToByte(textBoxA.Text)));
             labelM2.Text = textBoxB.Text + " = " + Convert.ToString(integerToPolynomial(Convert.ToByte(textBoxB.Text)));
             labelM3.Text = Convert.ToString(integerToPolynomial(Convert.ToByte(textBoxA.Text)) * integerToPolynomial(Convert.ToByte(textBoxB.Text)));
+            labelM4.Text = Convert.ToString((new Polynomial()).polynomialReductionFunction(integerToPolynomial(Convert.ToByte(textBoxA.Text)) * integerToPolynomial(Convert.ToByte(textBoxB.Text))));
         }
+
         private static Polynomial integerToPolynomial(int a)
         {
             string strTemp = Convert.ToString(a, 2);
@@ -342,8 +345,10 @@ namespace Galois_fields
                 resPol[i] = Convert.ToByte(strTemp[i] - '0');
             }
             return new Polynomial(resPol);
+
         }
         ///!!!
+
 
         private void genPolynomial_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -406,7 +411,9 @@ namespace Galois_fields
 
         internal class Polynomial
         {
-            private readonly double[] _coefficients;
+
+            public readonly double[] _coefficients;
+            private static Polynomial _tempPol;
 
             public Polynomial(params double[] coefficients)
             {
@@ -437,14 +444,17 @@ namespace Galois_fields
                     {
                         resPol += _coefficients[i] + "x^" + Convert.ToString(_coefficients.Length - 1 - i) + "+";
                     }
-                    if ((_coefficients[i] != 1) & (_coefficients[i] != 0) & (_coefficients[i] < 0))
-                    {
-                        resPol += "(" + _coefficients[i] + ")x^" + Convert.ToString(_coefficients.Length - 1 - i) + "+";
-                    }
+                    //// СЛЕД. КОНСТРУКЦИЯ НЕ ИСПОЛЬЗУЕТСЯ Т.К. У НАС ВЕЗДЕ ЗНАК "+" стоит!!!
+                    //if ((_coefficients[i] != 1) & (_coefficients[i] != 0) & (_coefficients[i] < 0))
+                    //{
+                    //    resPol += "(" + _coefficients[i] + ")x^" + Convert.ToString(_coefficients.Length - 1 - i) + "+";
+                    //}
+                    ////
                 }
-                    resPol = resPol.Remove(resPol.Length - 1);
-                    resPol = resPol.Replace("x^0", "1");
-                    return resPol;
+                resPol = resPol.Remove(resPol.Length - 1);
+                resPol = resPol.Replace("x^0", "1");
+                // resPol = resPol.Replace("x^1", "x");
+                return resPol;
             }
 
             public double Calculate(double x)
@@ -512,8 +522,35 @@ namespace Galois_fields
                     }
                 }
 
+                _tempPol = new Polynomial(result);
                 return new Polynomial(result);
             }
+
+
+            public Polynomial polynomialReductionFunction(Polynomial unreducedPolynomial)
+            {
+                double[] tempCoef = new double[unreducedPolynomial._coefficients.Length];
+                for (int i = 0; i < unreducedPolynomial._coefficients.Length; i++)
+                {
+                    tempCoef[i] = unreducedPolynomial[i];
+                }
+
+                for (int i = 0; i < tempCoef.Length; i++)
+                {
+                    if ((tempCoef[i] != 1) && (tempCoef[i] != 0) && (tempCoef[i] % 2 == 1))
+                    {
+                        tempCoef[i] = 1;
+                    }
+                    else if ((tempCoef[i] != 1) && (tempCoef[i] != 0) && (tempCoef[i] % 2 == 0))
+                    {
+                        tempCoef[i] = 0;
+                    }
+                }
+
+                Polynomial resReductPol = new Polynomial(tempCoef);
+                return resReductPol;
+            }
+
         }
     }
 }
