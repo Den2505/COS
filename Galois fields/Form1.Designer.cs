@@ -53,6 +53,7 @@
             this.genPolynomialBox = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.labelM1 = new System.Windows.Forms.Label();
             this.labelM2 = new System.Windows.Forms.Label();
             this.labelM3 = new System.Windows.Forms.Label();
@@ -62,7 +63,6 @@
             this.labelM7 = new System.Windows.Forms.Label();
             this.labelM8 = new System.Windows.Forms.Label();
             this.labelM9 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -288,7 +288,7 @@
             this.labelAS10.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelAS10.Location = new System.Drawing.Point(83, 556);
             this.labelAS10.Name = "labelAS10";
-            this.labelAS10.Size = new System.Drawing.Size(47, 22);
+            this.labelAS10.Size = new System.Drawing.Size(50, 22);
             this.labelAS10.TabIndex = 22;
             this.labelAS10.Tag = "";
             this.labelAS10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -356,6 +356,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Операции и порождающий полином";
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.labelResult);
+            this.groupBox3.Location = new System.Drawing.Point(119, 49);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(209, 87);
+            this.groupBox3.TabIndex = 24;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Операция и результат";
+            // 
             // labelM1
             // 
             this.labelM1.AutoSize = true;
@@ -399,7 +409,7 @@
             this.labelM5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelM5.Location = new System.Drawing.Point(53, 477);
             this.labelM5.Name = "labelM5";
-            this.labelM5.Size = new System.Drawing.Size(559, 23);
+            this.labelM5.Size = new System.Drawing.Size(569, 23);
             this.labelM5.TabIndex = 30;
             this.labelM5.Visible = false;
             // 
@@ -408,7 +418,7 @@
             this.labelM6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelM6.Location = new System.Drawing.Point(53, 503);
             this.labelM6.Name = "labelM6";
-            this.labelM6.Size = new System.Drawing.Size(559, 23);
+            this.labelM6.Size = new System.Drawing.Size(569, 23);
             this.labelM6.TabIndex = 31;
             this.labelM6.Visible = false;
             // 
@@ -417,16 +427,16 @@
             this.labelM7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelM7.Location = new System.Drawing.Point(53, 529);
             this.labelM7.Name = "labelM7";
-            this.labelM7.Size = new System.Drawing.Size(559, 23);
+            this.labelM7.Size = new System.Drawing.Size(569, 23);
             this.labelM7.TabIndex = 32;
             this.labelM7.Visible = false;
             // 
             // labelM8
             // 
             this.labelM8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelM8.Location = new System.Drawing.Point(241, 585);
+            this.labelM8.Location = new System.Drawing.Point(12, 585);
             this.labelM8.Name = "labelM8";
-            this.labelM8.Size = new System.Drawing.Size(171, 23);
+            this.labelM8.Size = new System.Drawing.Size(610, 23);
             this.labelM8.TabIndex = 33;
             this.labelM8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelM8.Visible = false;
@@ -436,19 +446,9 @@
             this.labelM9.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelM9.Location = new System.Drawing.Point(84, 619);
             this.labelM9.Name = "labelM9";
-            this.labelM9.Size = new System.Drawing.Size(528, 23);
+            this.labelM9.Size = new System.Drawing.Size(50, 23);
             this.labelM9.TabIndex = 34;
             this.labelM9.Visible = false;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.labelResult);
-            this.groupBox3.Location = new System.Drawing.Point(119, 49);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(209, 87);
-            this.groupBox3.TabIndex = 24;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Операция и результат";
             // 
             // Form1
             // 

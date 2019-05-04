@@ -58,24 +58,14 @@ namespace Galois_fields
             }
             if (_operationGF == "multiplication")
             {
+                genExpTable();
+                genLogTable();
+                labelResult.Text = "a * b = " + Convert.ToString(operationMul(a, b));
+                _resultOperation = operationMul(a, b);
 
-                if (textBoxA.Text == "0" || textBoxB.Text == "0")
-                {
-                    MessageBox.Show("Операция не имеет смысла! Одна из переменных содержит нулевое значение!", "Внимание!",
-                       MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    genExpTable();
-                    genLogTable();
-                    labelResult.Text = "a * b = " + Convert.ToString(operationMul(a, b));
-                    _resultOperation = operationMul(a, b);
-
-                    //офф
-                    enableVisibleMultiplicationLables();
-                    operationMultiplicationExpand();
-                }
-
+                //офф
+                enableVisibleMultiplicationLables();
+                operationMultiplicationExpand();
             }
             if (_operationGF == "division")
             {
@@ -359,8 +349,8 @@ namespace Galois_fields
             labelM5.Text = labelM4.Text;
             labelM6.Text = genPolynomialBox.Text;
             labelM7.Text = Convert.ToString(integerToPolynomial(Convert.ToByte(_resultOperation)));
-            labelM8.Text = Convert.ToString(_resultOperation) + " = " + Convert.ToString(_resultOperation, 2).PadLeft(8, '0');
-            labelM9.Text = Convert.ToString(integerToPolynomial(Convert.ToByte(_resultOperation))) +" = "+Convert.ToString(_resultOperation);
+            labelM8.Text = Convert.ToString(integerToPolynomial(Convert.ToByte(_resultOperation))) + " = " + Convert.ToString(_resultOperation);
+            labelM9.Text = Convert.ToString(_resultOperation);
 
         }
 
@@ -475,7 +465,14 @@ namespace Galois_fields
                 }
                 resPol = resPol.Replace("x^1+", "x+");
                 resPol = resPol.Replace("x^0+", "1+");
-                resPol = resPol.Remove(resPol.Length - 1);
+                if (resPol != "")
+                {
+                    resPol = resPol.Remove(resPol.Length - 1);
+                }
+                else
+                {
+                    resPol = "0";
+                }
                 return resPol;
             }
 
