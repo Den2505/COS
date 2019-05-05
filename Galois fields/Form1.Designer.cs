@@ -112,7 +112,7 @@
             this.radioButtonApp.AutoSize = true;
             this.radioButtonApp.Checked = true;
             this.radioButtonApp.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButtonApp.Location = new System.Drawing.Point(6, 19);
+            this.radioButtonApp.Location = new System.Drawing.Point(15, 19);
             this.radioButtonApp.Name = "radioButtonApp";
             this.radioButtonApp.Size = new System.Drawing.Size(97, 23);
             this.radioButtonApp.TabIndex = 4;
@@ -125,7 +125,7 @@
             // 
             this.radioButtonSub.AutoSize = true;
             this.radioButtonSub.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButtonSub.Location = new System.Drawing.Point(6, 48);
+            this.radioButtonSub.Location = new System.Drawing.Point(15, 48);
             this.radioButtonSub.Name = "radioButtonSub";
             this.radioButtonSub.Size = new System.Drawing.Size(104, 23);
             this.radioButtonSub.TabIndex = 5;
@@ -138,12 +138,12 @@
             // 
             this.radioButtonMul.AutoSize = true;
             this.radioButtonMul.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButtonMul.Location = new System.Drawing.Point(6, 77);
+            this.radioButtonMul.Location = new System.Drawing.Point(15, 77);
             this.radioButtonMul.Name = "radioButtonMul";
-            this.radioButtonMul.Size = new System.Drawing.Size(107, 23);
+            this.radioButtonMul.Size = new System.Drawing.Size(124, 23);
             this.radioButtonMul.TabIndex = 6;
             this.radioButtonMul.TabStop = true;
-            this.radioButtonMul.Text = "Умножение";
+            this.radioButtonMul.Text = "Произведение";
             this.radioButtonMul.UseVisualStyleBackColor = true;
             this.radioButtonMul.CheckedChanged += new System.EventHandler(this.radioButtonMul_CheckedChanged);
             // 
@@ -151,12 +151,12 @@
             // 
             this.radioButtonDiv.AutoSize = true;
             this.radioButtonDiv.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButtonDiv.Location = new System.Drawing.Point(6, 106);
+            this.radioButtonDiv.Location = new System.Drawing.Point(15, 106);
             this.radioButtonDiv.Name = "radioButtonDiv";
-            this.radioButtonDiv.Size = new System.Drawing.Size(85, 23);
+            this.radioButtonDiv.Size = new System.Drawing.Size(82, 23);
             this.radioButtonDiv.TabIndex = 7;
             this.radioButtonDiv.TabStop = true;
-            this.radioButtonDiv.Text = "Деление";
+            this.radioButtonDiv.Text = "Частное";
             this.radioButtonDiv.UseVisualStyleBackColor = true;
             this.radioButtonDiv.CheckedChanged += new System.EventHandler(this.radioButtonDiv_CheckedChanged);
             // 
@@ -174,12 +174,12 @@
             // 
             // labelResult
             // 
-            this.labelResult.AutoSize = true;
-            this.labelResult.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelResult.Location = new System.Drawing.Point(14, 26);
+            this.labelResult.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelResult.Location = new System.Drawing.Point(6, 21);
             this.labelResult.Name = "labelResult";
-            this.labelResult.Size = new System.Drawing.Size(0, 22);
+            this.labelResult.Size = new System.Drawing.Size(197, 47);
             this.labelResult.TabIndex = 9;
+            this.labelResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelResult.UseCompatibleTextRendering = true;
             // 
             // pictureBox1
@@ -317,7 +317,7 @@
             "x^8+x^7+x^6+x^3+x^2+x^1+1",
             "x^8+x^7+x^6+x^5+x^2+x^1+1",
             "x^8+x^7+x^6+x^5+x^4+x^2+1"});
-            this.genPolynomialBox.Location = new System.Drawing.Point(120, 19);
+            this.genPolynomialBox.Location = new System.Drawing.Point(177, 18);
             this.genPolynomialBox.Name = "genPolynomialBox";
             this.genPolynomialBox.Size = new System.Drawing.Size(208, 27);
             this.genPolynomialBox.TabIndex = 23;
@@ -335,7 +335,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(266, 136);
+            this.groupBox1.Size = new System.Drawing.Size(209, 136);
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Значения";
@@ -349,9 +349,9 @@
             this.groupBox2.Controls.Add(this.radioButtonApp);
             this.groupBox2.Controls.Add(this.radioButtonSub);
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox2.Location = new System.Drawing.Point(284, 12);
+            this.groupBox2.Location = new System.Drawing.Point(227, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(338, 136);
+            this.groupBox2.Size = new System.Drawing.Size(395, 136);
             this.groupBox2.TabIndex = 25;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Операции и порождающий полином";
@@ -359,9 +359,9 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.labelResult);
-            this.groupBox3.Location = new System.Drawing.Point(119, 49);
+            this.groupBox3.Location = new System.Drawing.Point(176, 48);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(209, 87);
+            this.groupBox3.Size = new System.Drawing.Size(209, 88);
             this.groupBox3.TabIndex = 24;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Операция и результат";
@@ -490,7 +490,6 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
