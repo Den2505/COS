@@ -177,7 +177,7 @@
             this.labelResult.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelResult.Location = new System.Drawing.Point(6, 21);
             this.labelResult.Name = "labelResult";
-            this.labelResult.Size = new System.Drawing.Size(197, 47);
+            this.labelResult.Size = new System.Drawing.Size(218, 47);
             this.labelResult.TabIndex = 9;
             this.labelResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelResult.UseCompatibleTextRendering = true;
@@ -317,9 +317,9 @@
             "x^8+x^7+x^6+x^3+x^2+x^1+1",
             "x^8+x^7+x^6+x^5+x^2+x^1+1",
             "x^8+x^7+x^6+x^5+x^4+x^2+1"});
-            this.genPolynomialBox.Location = new System.Drawing.Point(177, 18);
+            this.genPolynomialBox.Location = new System.Drawing.Point(155, 18);
             this.genPolynomialBox.Name = "genPolynomialBox";
-            this.genPolynomialBox.Size = new System.Drawing.Size(208, 27);
+            this.genPolynomialBox.Size = new System.Drawing.Size(230, 27);
             this.genPolynomialBox.TabIndex = 23;
             this.genPolynomialBox.Tag = "";
             this.genPolynomialBox.SelectedIndexChanged += new System.EventHandler(this.genPolynomial_SelectedIndexChanged);
@@ -359,9 +359,9 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.labelResult);
-            this.groupBox3.Location = new System.Drawing.Point(176, 48);
+            this.groupBox3.Location = new System.Drawing.Point(155, 48);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(209, 88);
+            this.groupBox3.Size = new System.Drawing.Size(230, 88);
             this.groupBox3.TabIndex = 24;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Операция и результат";
