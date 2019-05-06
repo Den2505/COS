@@ -39,7 +39,6 @@
             this.radioButtonDiv = new System.Windows.Forms.RadioButton();
             this.buttonResult = new System.Windows.Forms.Button();
             this.labelResult = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelAS1 = new System.Windows.Forms.Label();
             this.labelAS2 = new System.Windows.Forms.Label();
             this.labelAS3 = new System.Windows.Forms.Label();
@@ -53,6 +52,7 @@
             this.genPolynomialBox = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.radioButtonExp = new System.Windows.Forms.RadioButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.labelM1 = new System.Windows.Forms.Label();
             this.labelM2 = new System.Windows.Forms.Label();
@@ -63,10 +63,16 @@
             this.labelM7 = new System.Windows.Forms.Label();
             this.labelM8 = new System.Windows.Forms.Label();
             this.labelM9 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.labelD1 = new System.Windows.Forms.Label();
+            this.labelD2 = new System.Windows.Forms.Label();
+            this.labelD3 = new System.Windows.Forms.Label();
+            this.labelD5 = new System.Windows.Forms.Label();
+            this.labelD4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -125,7 +131,7 @@
             // 
             this.radioButtonSub.AutoSize = true;
             this.radioButtonSub.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButtonSub.Location = new System.Drawing.Point(15, 48);
+            this.radioButtonSub.Location = new System.Drawing.Point(15, 41);
             this.radioButtonSub.Name = "radioButtonSub";
             this.radioButtonSub.Size = new System.Drawing.Size(104, 23);
             this.radioButtonSub.TabIndex = 5;
@@ -138,7 +144,7 @@
             // 
             this.radioButtonMul.AutoSize = true;
             this.radioButtonMul.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButtonMul.Location = new System.Drawing.Point(15, 77);
+            this.radioButtonMul.Location = new System.Drawing.Point(15, 63);
             this.radioButtonMul.Name = "radioButtonMul";
             this.radioButtonMul.Size = new System.Drawing.Size(124, 23);
             this.radioButtonMul.TabIndex = 6;
@@ -151,7 +157,7 @@
             // 
             this.radioButtonDiv.AutoSize = true;
             this.radioButtonDiv.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButtonDiv.Location = new System.Drawing.Point(15, 106);
+            this.radioButtonDiv.Location = new System.Drawing.Point(15, 107);
             this.radioButtonDiv.Name = "radioButtonDiv";
             this.radioButtonDiv.Size = new System.Drawing.Size(82, 23);
             this.radioButtonDiv.TabIndex = 7;
@@ -181,17 +187,6 @@
             this.labelResult.TabIndex = 9;
             this.labelResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelResult.UseCompatibleTextRendering = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Image = global::Galois_fields.Properties.Resources.imgAdd;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 154);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(610, 484);
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
             // 
             // labelAS1
             // 
@@ -342,6 +337,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.radioButtonExp);
             this.groupBox2.Controls.Add(this.groupBox3);
             this.groupBox2.Controls.Add(this.radioButtonMul);
             this.groupBox2.Controls.Add(this.radioButtonDiv);
@@ -355,6 +351,19 @@
             this.groupBox2.TabIndex = 25;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Операции и порождающий полином";
+            // 
+            // radioButtonExp
+            // 
+            this.radioButtonExp.AutoSize = true;
+            this.radioButtonExp.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButtonExp.Location = new System.Drawing.Point(15, 85);
+            this.radioButtonExp.Name = "radioButtonExp";
+            this.radioButtonExp.Size = new System.Drawing.Size(106, 23);
+            this.radioButtonExp.TabIndex = 25;
+            this.radioButtonExp.TabStop = true;
+            this.radioButtonExp.Text = "Возведение";
+            this.radioButtonExp.UseVisualStyleBackColor = true;
+            this.radioButtonExp.CheckedChanged += new System.EventHandler(this.radioButtonExp_CheckedChanged);
             // 
             // groupBox3
             // 
@@ -450,6 +459,70 @@
             this.labelM9.TabIndex = 34;
             this.labelM9.Visible = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox1.Image = global::Galois_fields.Properties.Resources.imgAdd;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 154);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(610, 484);
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
+            // labelD1
+            // 
+            this.labelD1.AutoSize = true;
+            this.labelD1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelD1.Location = new System.Drawing.Point(278, 222);
+            this.labelD1.Name = "labelD1";
+            this.labelD1.Size = new System.Drawing.Size(0, 19);
+            this.labelD1.TabIndex = 35;
+            this.labelD1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelD1.Visible = false;
+            // 
+            // labelD2
+            // 
+            this.labelD2.AutoSize = true;
+            this.labelD2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelD2.Location = new System.Drawing.Point(307, 247);
+            this.labelD2.Name = "labelD2";
+            this.labelD2.Size = new System.Drawing.Size(0, 19);
+            this.labelD2.TabIndex = 36;
+            this.labelD2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelD2.Visible = false;
+            // 
+            // labelD3
+            // 
+            this.labelD3.AutoSize = true;
+            this.labelD3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelD3.Location = new System.Drawing.Point(297, 306);
+            this.labelD3.Name = "labelD3";
+            this.labelD3.Size = new System.Drawing.Size(0, 19);
+            this.labelD3.TabIndex = 37;
+            this.labelD3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelD3.Visible = false;
+            // 
+            // labelD5
+            // 
+            this.labelD5.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelD5.Location = new System.Drawing.Point(85, 371);
+            this.labelD5.Name = "labelD5";
+            this.labelD5.Size = new System.Drawing.Size(50, 23);
+            this.labelD5.TabIndex = 38;
+            this.labelD5.Visible = false;
+            // 
+            // labelD4
+            // 
+            this.labelD4.AutoSize = true;
+            this.labelD4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelD4.Location = new System.Drawing.Point(236, 340);
+            this.labelD4.Name = "labelD4";
+            this.labelD4.Size = new System.Drawing.Size(0, 19);
+            this.labelD4.TabIndex = 39;
+            this.labelD4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelD4.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -457,6 +530,11 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(624, 650);
+            this.Controls.Add(this.labelD4);
+            this.Controls.Add(this.labelD5);
+            this.Controls.Add(this.labelD3);
+            this.Controls.Add(this.labelD2);
+            this.Controls.Add(this.labelD1);
             this.Controls.Add(this.labelM9);
             this.Controls.Add(this.labelM8);
             this.Controls.Add(this.labelM7);
@@ -484,12 +562,12 @@
             this.Name = "Form1";
             this.Text = "Простейшие мат. операции с полями Галуа";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -504,6 +582,7 @@
         private System.Windows.Forms.RadioButton radioButtonApp;
         private System.Windows.Forms.RadioButton radioButtonSub;
         private System.Windows.Forms.RadioButton radioButtonMul;
+        private System.Windows.Forms.RadioButton radioButtonExp;
         private System.Windows.Forms.RadioButton radioButtonDiv;
         private System.Windows.Forms.Button buttonResult;
         private System.Windows.Forms.Label labelResult;
@@ -531,6 +610,11 @@
         private System.Windows.Forms.Label labelM8;
         private System.Windows.Forms.Label labelM9;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label labelD1;
+        private System.Windows.Forms.Label labelD2;
+        private System.Windows.Forms.Label labelD3;
+        private System.Windows.Forms.Label labelD5;
+        private System.Windows.Forms.Label labelD4;
     }
 }
 
