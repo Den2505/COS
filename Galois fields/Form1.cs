@@ -177,7 +177,7 @@ namespace Galois_fields
         private static byte operationDiv(byte a, byte b)
         {
             byte resDiv = 0;
-            if (b != 0)
+            if ((a != 0) & (b != 0))
             {
                 byte temp = (byte)((255 + _logarithmsT[a] - _logarithmsT[b]) % 255);
                 resDiv = _exponentialsT[temp];
