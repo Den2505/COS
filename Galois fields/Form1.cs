@@ -436,7 +436,7 @@ namespace Galois_fields
                 case "x^8+x^4+x^3+x^2+1":
                     _genPolynomial = 0x11D;
                     break;
-                case "x^8+x^5+x^3+x^1+1":
+                case "x^8+x^5+x^3+x+1":
                     _genPolynomial = 0x12B;
                     break;
                 case "x^8+x^5+x^3+x^2+1":
@@ -445,10 +445,10 @@ namespace Galois_fields
                 case "x^8+x^6+x^3+x^2+1":
                     _genPolynomial = 0x14D;
                     break;
-                case "x^8+x^6+x^4+x^3+x^2+x^1+1":
+                case "x^8+x^6+x^4+x^3+x^2+x+1":
                     _genPolynomial = 0x15F;
                     break;
-                case "x^8+x^6+x^5+x^1+1":
+                case "x^8+x^6+x^5+x+1":
                     _genPolynomial = 0x163;
                     break;
                 case "x^8+x^6+x^5+x^2+1":
@@ -460,7 +460,7 @@ namespace Galois_fields
                 case "x^8+x^6+x^5+x^4+1":
                     _genPolynomial = 0x171;
                     break;
-                case "x^8+x^7+x^2+x^1+1":
+                case "x^8+x^7+x^2+x+1":
                     _genPolynomial = 0x187;
                     break;
                 case "x^8+x^7+x^3+x^2+1":
@@ -469,13 +469,13 @@ namespace Galois_fields
                 case "x^8+x^7+x^5+x^3+1":
                     _genPolynomial = 0x1A9;
                     break;
-                case "x^8+x^7+x^6+x^1+1":
+                case "x^8+x^7+x^6+x+1":
                     _genPolynomial = 0x1C3;
                     break;
-                case "x^8+x^7+x^6+x^3+x^2+x^1+1":
+                case "x^8+x^7+x^6+x^3+x^2+x+1":
                     _genPolynomial = 0x1CF;
                     break;
-                case "x^8+x^7+x^6+x^5+x^2+x^1+1":
+                case "x^8+x^7+x^6+x^5+x^2+x+1":
                     _genPolynomial = 0x1E7;
                     break;
                 case "x^8+x^7+x^6+x^5+x^4+x^2+1":

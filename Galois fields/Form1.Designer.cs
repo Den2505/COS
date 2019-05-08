@@ -297,20 +297,20 @@
             this.genPolynomialBox.FormattingEnabled = true;
             this.genPolynomialBox.Items.AddRange(new object[] {
             "x^8+x^4+x^3+x^2+1",
-            "x^8+x^5+x^3+x^1+1",
+            "x^8+x^5+x^3+x+1",
             "x^8+x^5+x^3+x^2+1",
             "x^8+x^6+x^3+x^2+1",
-            "x^8+x^6+x^4+x^3+x^2+x^1+1",
-            "x^8+x^6+x^5+x^1+1",
+            "x^8+x^6+x^4+x^3+x^2+x+1",
+            "x^8+x^6+x^5+x+1",
             "x^8+x^6+x^5+x^2+1",
             "x^8+x^6+x^5+x^3+1",
             "x^8+x^6+x^5+x^4+1",
-            "x^8+x^7+x^2+x^1+1",
+            "x^8+x^7+x^2+x+1",
             "x^8+x^7+x^3+x^2+1",
             "x^8+x^7+x^5+x^3+1",
-            "x^8+x^7+x^6+x^1+1",
-            "x^8+x^7+x^6+x^3+x^2+x^1+1",
-            "x^8+x^7+x^6+x^5+x^2+x^1+1",
+            "x^8+x^7+x^6+x+1",
+            "x^8+x^7+x^6+x^3+x^2+x+1",
+            "x^8+x^7+x^6+x^5+x^2+x+1",
             "x^8+x^7+x^6+x^5+x^4+x^2+1"});
             this.genPolynomialBox.Location = new System.Drawing.Point(155, 18);
             this.genPolynomialBox.Name = "genPolynomialBox";
