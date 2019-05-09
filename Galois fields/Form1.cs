@@ -25,6 +25,7 @@ namespace Galois_fields
                 addLabelsToMasAS();
                 addLabelsToMasM();
                 addLabelsToMasD();
+                addLabelsToMasE();
                 genPolynomialBox.SelectedIndex = 0;
             }
         }
@@ -33,6 +34,7 @@ namespace Galois_fields
         private List<Label> _labelAddSubMas = new List<Label>();
         private List<Label> _labelMulMas = new List<Label>();
         private List<Label> _labelDivMas = new List<Label>();
+        private List<Label> _labelExpMas = new List<Label>();
         private bool _addLabCheck = false;
         private byte _resultOperation;
 
@@ -77,6 +79,8 @@ namespace Galois_fields
                 _resultOperation = operationExp(a, b);
 
                 //офф
+                enableVisibleExponentiationLables();
+                operationExponentiationExpand();
             }
             if (_operationGF == "division")
             {
@@ -196,6 +200,7 @@ namespace Galois_fields
             clearAdditionAndSubstractionLables();
             disableVisibleMultiplicationLables();
             disableVisibleDivisionLables();
+            disableVisibleExponentiationLables();
         }
 
         private void radioButtonSub_CheckedChanged(object sender, EventArgs e)
@@ -208,6 +213,7 @@ namespace Galois_fields
             clearAdditionAndSubstractionLables();
             disableVisibleMultiplicationLables();
             disableVisibleDivisionLables();
+            disableVisibleExponentiationLables();
         }
 
         private void radioButtonMul_CheckedChanged(object sender, EventArgs e)
@@ -219,11 +225,12 @@ namespace Galois_fields
             labelResult.Text = null;
             disableVisibleAdditionAndSubstractionLables();
             disableVisibleDivisionLables();
+            disableVisibleExponentiationLables();
         }
 
         private void radioButtonExp_CheckedChanged(object sender, EventArgs e)
         {
-            pictureBox1.Image = null;
+            pictureBox1.Image = Properties.Resources.imgExp;
             _operationGF = "exponentiation";
             genPolynomialBox.Enabled = true;
 
@@ -242,6 +249,7 @@ namespace Galois_fields
             labelResult.Text = null;
             disableVisibleAdditionAndSubstractionLables();
             disableVisibleMultiplicationLables();
+            disableVisibleExponentiationLables();
         }
 
         private void textBoxA_TextChanged(object sender, EventArgs e)
@@ -326,6 +334,14 @@ namespace Galois_fields
             _labelDivMas.Add(labelD5);
         }
 
+        private void addLabelsToMasE()
+        {
+            _addLabCheck = true;
+            _labelExpMas.Add(labelE1);
+            _labelExpMas.Add(labelE2);
+            _labelExpMas.Add(labelE3);
+        }
+
         private void enableVisibleAdditionAndSubstractionLables()
         {
             foreach (Label iLabel in _labelAddSubMas)
@@ -373,6 +389,21 @@ namespace Galois_fields
         private void disableVisibleDivisionLables()
         {
             foreach (Label iLabel in _labelDivMas)
+            {
+                iLabel.Visible = false;
+            }
+        }
+
+        private void enableVisibleExponentiationLables()
+        {
+            foreach (Label iLabel in _labelExpMas)
+            {
+                iLabel.Visible = true;
+            }
+        }
+        private void disableVisibleExponentiationLables()
+        {
+            foreach (Label iLabel in _labelExpMas)
             {
                 iLabel.Visible = false;
             }
@@ -427,6 +458,13 @@ namespace Galois_fields
             labelD3.Text = labelD1.Text + " * " + labelD2.Text + " = " + Convert.ToString(operationMul(Convert.ToByte(textBoxA.Text), tempForLabelD));
             labelD4.Text = genPolynomialBox.Text;
             labelD5.Text = Convert.ToString(_resultOperation);
+        }
+
+        private void operationExponentiationExpand()
+        {
+            labelE1.Text = Convert.ToString(_resultOperation);
+            labelE2.Text = genPolynomialBox.Text;
+            labelE3.Text = Convert.ToString(_resultOperation);
         }
 
         private void genPolynomial_SelectedIndexChanged(object sender, EventArgs e)

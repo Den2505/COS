@@ -12,8 +12,8 @@ Galois field
 Описание произведения   
 ![alt text](https://github.com/Den2505/COS/blob/master/imgMul.png)
 
-Описание возведения   
-*
+Описание возведения  
+![alt text](https://github.com/Den2505/COS/blob/master/imgExp.png)
 
 Описание частного   
 ![alt text](https://github.com/Den2505/COS/blob/master/imgDiv.png)

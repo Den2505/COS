@@ -63,12 +63,15 @@
             this.labelM7 = new System.Windows.Forms.Label();
             this.labelM8 = new System.Windows.Forms.Label();
             this.labelM9 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelD1 = new System.Windows.Forms.Label();
             this.labelD2 = new System.Windows.Forms.Label();
             this.labelD3 = new System.Windows.Forms.Label();
             this.labelD5 = new System.Windows.Forms.Label();
             this.labelD4 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.labelE1 = new System.Windows.Forms.Label();
+            this.labelE2 = new System.Windows.Forms.Label();
+            this.labelE3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -459,17 +462,6 @@
             this.labelM9.TabIndex = 34;
             this.labelM9.Visible = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Image = global::Galois_fields.Properties.Resources.imgAdd;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 154);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(610, 484);
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            // 
             // labelD1
             // 
             this.labelD1.AutoSize = true;
@@ -523,6 +515,44 @@
             this.labelD4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelD4.Visible = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox1.Image = global::Galois_fields.Properties.Resources.imgAdd;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 154);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(610, 484);
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
+            // labelE1
+            // 
+            this.labelE1.AutoSize = true;
+            this.labelE1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelE1.Location = new System.Drawing.Point(341, 229);
+            this.labelE1.Name = "labelE1";
+            this.labelE1.Size = new System.Drawing.Size(0, 19);
+            this.labelE1.TabIndex = 40;
+            // 
+            // labelE2
+            // 
+            this.labelE2.AutoSize = true;
+            this.labelE2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelE2.Location = new System.Drawing.Point(232, 262);
+            this.labelE2.Name = "labelE2";
+            this.labelE2.Size = new System.Drawing.Size(0, 19);
+            this.labelE2.TabIndex = 41;
+            // 
+            // labelE3
+            // 
+            this.labelE3.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelE3.Location = new System.Drawing.Point(83, 606);
+            this.labelE3.Name = "labelE3";
+            this.labelE3.Size = new System.Drawing.Size(50, 23);
+            this.labelE3.TabIndex = 42;
+            this.labelE3.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -530,6 +560,9 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(624, 650);
+            this.Controls.Add(this.labelE3);
+            this.Controls.Add(this.labelE2);
+            this.Controls.Add(this.labelE1);
             this.Controls.Add(this.labelD4);
             this.Controls.Add(this.labelD5);
             this.Controls.Add(this.labelD3);
@@ -615,6 +648,9 @@
         private System.Windows.Forms.Label labelD3;
         private System.Windows.Forms.Label labelD5;
         private System.Windows.Forms.Label labelD4;
+        private System.Windows.Forms.Label labelE1;
+        private System.Windows.Forms.Label labelE2;
+        private System.Windows.Forms.Label labelE3;
     }
 }
 

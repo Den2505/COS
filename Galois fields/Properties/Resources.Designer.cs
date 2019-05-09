@@ -83,6 +83,16 @@ namespace Galois_fields.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap imgExp {
+            get {
+                object obj = ResourceManager.GetObject("imgExp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap imgMul {
             get {
                 object obj = ResourceManager.GetObject("imgMul", resourceCulture);
