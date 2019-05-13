@@ -72,6 +72,7 @@
             this.labelE1 = new System.Windows.Forms.Label();
             this.labelE2 = new System.Windows.Forms.Label();
             this.labelE3 = new System.Windows.Forms.Label();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -553,10 +554,16 @@
             this.labelE3.TabIndex = 42;
             this.labelE3.Visible = false;
             // 
+            // helpProvider1
+            // 
+            this.helpProvider1.HelpNamespace = "";
+            this.helpProvider1.Tag = "23";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(624, 650);
@@ -590,9 +597,12 @@
             this.Controls.Add(this.labelAS2);
             this.Controls.Add(this.labelAS1);
             this.Controls.Add(this.pictureBox1);
+            this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Простейшие мат. операции с полями Галуа";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
@@ -651,6 +661,7 @@
         private System.Windows.Forms.Label labelE1;
         private System.Windows.Forms.Label labelE2;
         private System.Windows.Forms.Label labelE3;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }
 

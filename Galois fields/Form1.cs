@@ -84,14 +84,23 @@ namespace Galois_fields
             }
             if (_operationGF == "division")
             {
-                genExpTable();
-                genLogTable();
-                labelResult.Text = "a / b = " + Convert.ToString(operationDiv(a, b));
-                _resultOperation = operationDiv(a, b);
+                if (textBoxB.Text == "0")
+                {
+                    MessageBox.Show("На ноль делить нельзя!", "Внимание!",
+                       MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
 
-                //офф
-                enableVisibleDivisionLables();
-                operationDivisionExpand();
+                    genExpTable();
+                    genLogTable();
+                    labelResult.Text = "a / b = " + Convert.ToString(operationDiv(a, b));
+                    _resultOperation = operationDiv(a, b);
+
+                    //офф
+                    enableVisibleDivisionLables();
+                    operationDivisionExpand();
+                }
             }
         }
 
@@ -523,8 +532,16 @@ namespace Galois_fields
         }
         private void Form1_Load(object sender, EventArgs e)
         {
+            this.HelpButtonClicked += new CancelEventHandler(HBClicked); //в обработчике загрузки формы подключаем обработчик щелчка по HelpButton
 
         }
+
+        private void HBClicked(object sender, CancelEventArgs e)
+        {
+            MessageBox.Show("Программа разработана студентами РТФ, гр. КЗИ-161  \n Научный руководитель доц., к. н. Одинец А. И. \n (с) 2019 by Omgtu. \n All Rights Reserved. \n Developed by KZI-161.",
+                "Информация об авторах.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
 
         internal class Polynomial
         {
